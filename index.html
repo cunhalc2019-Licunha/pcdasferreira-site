@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PC das Ferreira</title>
+
+<meta name="description" content="PC das Ferreira Empreendimentos & Engenharia — construção, incorporação e engenharia. Uma empresa voltada para o futuro.">
+<link rel="icon" type="image/png" href="assets/emblema.png">
+<meta property="og:title" content="PC das Ferreira · Imobiliária, Construtora e Engenharia">
+<meta property="og:description" content="Compra, venda, locação e administração de imóveis, construção, reformas e infraestrutura de engenharia em São Paulo.">
+<meta property="og:image" content="assets/hero-casa.jpg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: hero foto full-bleed com degradê marinho → faixas alternando branco / gelo / marinho; verde só em CTAs e detalhes. Tema único claro (pedido do cliente: cores do logo + branco). */
+:root{
+  --navy:#0B2A55;      /* círculo do logo */
+  --navy-deep:#071D3D;
+  --blue:#1E6FC4;      /* anel do logo */
+  --green:#7BC143;     /* árvore / arco */
+  --green-deep:#2F7A3B;
+  --white:#FFFFFF;
+  --ice:#F2F6FB;       /* neutro com leve viés azul */
+  --line:#DCE5F0;
+  --ink:#0A1A33;
+  --muted:#53627A;
+  --f-display:"Sora", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Manrope", "Segoe UI", system-ui, sans-serif;
+  --wrap:1200px;
+  --r:14px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--white)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-display);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-deep);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--green);border-radius:2px}
+.section{padding-block:clamp(64px,9vw,112px)}
+.section-head{display:grid;gap:14px;max-width:680px;margin-bottom:clamp(36px,5vw,56px)}
+.section-head h2{font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--navy)}
+.section-head p{color:var(--muted);font-size:1.06rem}
+.ph{border-bottom:1.5px dashed var(--green);background:color-mix(in srgb,var(--green) 12%,transparent);padding:0 .25em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone;overflow-wrap:anywhere}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-display);font-weight:600;font-size:.98rem;padding:15px 26px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn-green{background:var(--green);color:var(--navy-deep)}
+.btn-green:hover{background:#8ad04f;transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(123,193,67,.7)}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:var(--white)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--blue)}
+.btn svg{width:18px;height:18px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:48px;height:auto}
+.brand b{display:block;font-family:var(--f-display);font-weight:800;color:var(--navy);font-size:1.05rem;letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:700}
+.nav{display:flex;gap:clamp(18px,2.2vw,32px);align-items:center}
+.nav a{text-decoration:none;font-family:var(--f-display);font-weight:500;font-size:.92rem;line-height:1;color:var(--ink);white-space:nowrap}
+.brand span{white-space:nowrap}
+.nav a:hover{color:var(--blue)}
+.nav a.btn-navy,.nav a.btn-navy:hover{color:var(--white)}
+.nav .btn{padding:0 22px;height:44px;font-size:.92rem;font-weight:600;line-height:1}
+.menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--navy)}
+@media (max-width:1140px){
+  .nav{position:absolute;top:76px;left:0;right:0;background:var(--white);flex-direction:column;align-items:stretch;gap:0;padding:8px max(20px,env(safe-area-inset-right,0px)) 20px max(20px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);display:none}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .nav a{line-height:1.4}
+  .nav .btn{margin-top:14px;border-bottom:0;height:48px}
+  .menu-btn{display:block}
+}
+
+/* hero */
+.hero{position:relative;color:var(--white);background:var(--navy-deep) url("assets/hero-casa.jpg") 70% center/cover no-repeat;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,29,61,.94) 0%,rgba(7,29,61,.82) 34%,rgba(7,29,61,.25) 66%,rgba(7,29,61,0) 82%)}
+.hero .wrap{position:relative;padding-block:clamp(72px,9vw,130px) clamp(90px,10vw,130px)}
+.hero-copy{max-width:620px;display:grid;gap:24px}
+.hero .eyebrow{color:var(--green)}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.3rem);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero p.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:#D6E2F2;max-width:520px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:10px;font-size:.92rem;color:#C9D7EA}
+.hero-chips span{display:inline-flex;align-items:center;gap:8px}
+.hero-chips span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.hero-copy{max-width:700px}
+.hero-svc{display:grid;gap:12px;margin-top:4px}
+.hero-svc-label{font-family:var(--f-display);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#9FB4D1}
+.hero-svc-list{display:flex;flex-wrap:wrap;gap:10px}
+.hero-svc-list a{display:inline-flex;align-items:center;height:42px;padding:0 18px;border-radius:999px;font-family:var(--f-display);font-weight:500;font-size:.88rem;line-height:1;white-space:nowrap;text-decoration:none;color:var(--white);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px);transition:background .2s,border-color .2s,color .2s}
+.hero-svc-list a:hover{background:var(--white);color:var(--navy);border-color:var(--white)}
+.hero-svc-list a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.svc{scroll-margin-top:100px}
+.svc .grp{font-family:var(--f-display);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.svc:target{border-color:var(--green);box-shadow:0 0 0 4px color-mix(in srgb,var(--green) 25%,transparent)}
+.svc a.more{font-family:var(--f-display);font-weight:600;color:var(--blue);text-decoration:none;font-size:.92rem}
+.svc a.more:hover{color:var(--navy)}
+.contact-lines a{color:#E3EBF6;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
+.contact-lines a:hover{color:var(--white);border-color:var(--green)}
+@media (max-width:700px){.hero::before{background:linear-gradient(180deg,rgba(7,29,61,.55) 0%,rgba(7,29,61,.92) 55%)}}
+
+/* números */
+.stats{background:var(--white);position:relative;z-index:2}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;transform:translateY(-50%);background:var(--white);border-radius:var(--r);box-shadow:0 24px 50px -28px rgba(11,42,85,.45);border:1px solid var(--line)}
+.stat{padding:26px 26px 26px 30px;border-right:1px solid var(--line);display:grid;gap:6px;align-content:start;text-decoration:none;position:relative;transition:background .2s}
+.stat::before{content:"";position:absolute;left:0;top:26px;width:3px;height:22px;border-radius:0 3px 3px 0;background:var(--green)}
+.stat:hover{background:var(--ice)}
+.stat:hover strong{color:var(--blue)}
+.stat:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.stat:first-child{border-radius:var(--r) 0 0 var(--r)}
+.stat:last-child{border-radius:0 var(--r) var(--r) 0}
+.stat:last-child{border-right:0}
+.stat strong{font-family:var(--f-display);font-size:1.12rem;font-weight:700;color:var(--navy);line-height:1.25;transition:color .2s}
+.stat span{color:var(--muted);font-size:.9rem;line-height:1.45}
+@media (max-width:820px){.stats .wrap{grid-template-columns:repeat(2,1fr);transform:translateY(-30%)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.stats-wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));height:0}
+.stats{height:0}
+@media (max-width:820px){.after-stats{padding-top:150px!important}}
+.after-stats{padding-top:clamp(130px,12vw,160px)!important}
+
+/* sobre */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,6vw,80px);align-items:stretch}
+.about-media{position:relative;min-height:440px}
+.about-media>img{position:absolute;inset:0;border-radius:var(--r);width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.about-badge{position:absolute;right:-18px;bottom:28px;background:var(--navy);color:var(--white);padding:18px 22px;border-radius:12px;display:flex;align-items:center;gap:14px;box-shadow:0 18px 40px -18px rgba(7,29,61,.7);max-width:260px}
+.about-badge img{width:44px}
+.about-badge b{font-family:var(--f-display);font-size:.95rem;display:block;line-height:1.25}
+.about-copy{display:grid;gap:22px;min-width:0;align-content:center;padding-block:8px}
+.about-copy h2{font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--navy)}
+.about-copy p{color:var(--muted)}
+.checks{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:14px}
+.checks li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;font-weight:600;color:var(--ink)}
+.checks li::before{content:"";width:28px;height:28px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23071D3D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/16px no-repeat}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}.about-media{min-height:0;aspect-ratio:4/3;max-width:100%}.about-badge{right:12px;bottom:16px}}
+
+/* serviços */
+.services{background:var(--ice)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;display:grid;gap:14px;align-content:start;transition:border-color .2s,transform .2s}
+.svc:hover{border-color:var(--blue);transform:translateY(-3px)}
+.svc .ico{width:52px;height:52px;border-radius:12px;background:var(--navy);display:grid;place-items:center}
+.svc .ico svg{width:26px;height:26px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:1.2rem;color:var(--navy)}
+.svc p{color:var(--muted);font-size:.97rem}
+@media (max-width:960px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.svc-grid{grid-template-columns:1fr}}
+
+/* empreendimentos */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.proj{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--white);display:grid;grid-template-rows:auto 1fr}
+.proj figure{margin:0;position:relative;aspect-ratio:4/3;background:var(--ice)}
+.proj figure img{width:100%;height:100%;object-fit:cover}
+.proj figure.empty{display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),var(--blue))}
+.proj figure.empty img{width:84px;height:auto;opacity:.95}
+.tag{position:absolute;left:14px;top:14px;font-family:var(--f-display);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+.tag.launch{background:var(--green);color:var(--navy-deep)}
+.tag.works{background:var(--white);color:var(--navy)}
+.tag.ready{background:var(--navy);color:var(--white)}
+.proj-body{padding:22px 24px 26px;display:grid;gap:12px;align-content:start}
+.proj-body h3{font-size:1.2rem;color:var(--navy)}
+.proj-meta{display:flex;flex-wrap:wrap;gap:8px 16px;color:var(--muted);font-size:.9rem}
+.proj-body a{font-family:var(--f-display);font-weight:600;color:var(--blue);text-decoration:none;font-size:.95rem;margin-top:4px}
+.proj-body a:hover{color:var(--navy)}
+@media (max-width:960px){.proj-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.proj-grid{grid-template-columns:1fr}}
+
+.areas{grid-template-columns:repeat(6,1fr)}
+.areas .proj{grid-column:span 2}
+.areas .proj.wide{grid-column:span 3}
+.areas .proj.wide figure{aspect-ratio:16/9}
+.proj-desc{color:var(--muted);font-size:.95rem}
+@media (max-width:960px){.areas{grid-template-columns:repeat(2,1fr)}.areas .proj,.areas .proj.wide{grid-column:auto}.areas .proj.wide figure{aspect-ratio:4/3}.areas .proj:last-child{grid-column:1/-1}}
+@media (max-width:620px){.areas{grid-template-columns:1fr}.areas .proj:last-child{grid-column:auto}}
+/* vídeo */
+.film{background:var(--navy-deep);color:var(--white)}
+.film-grid{display:grid;grid-template-columns:1fr .8fr;gap:clamp(36px,6vw,80px);align-items:center}
+.film-copy{display:grid;gap:22px;min-width:0}
+.film-copy .eyebrow{color:var(--green)}
+.film-copy h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.film-copy p{color:#C4D2E6}
+.film-video{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.8);max-width:460px;justify-self:center;width:100%}
+.film-video video{width:100%;aspect-ratio:4/5;object-fit:cover}
+.film-video::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.12);border-radius:var(--r);pointer-events:none}
+@media (max-width:860px){.film-grid{grid-template-columns:1fr}}
+
+/* processo */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s;position:relative}
+.step{display:grid;gap:12px;align-content:start;position:relative;padding-top:66px}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;top:0;left:0;width:50px;height:50px;border-radius:50%;background:var(--white);border:2px solid var(--navy);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;color:var(--navy);font-size:.95rem}
+.step::after{content:"";position:absolute;top:25px;left:60px;right:-12px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 14px)}
+.step:last-child::after{display:none}
+.step h3{font-size:1.12rem;color:var(--navy)}
+.step p{color:var(--muted);font-size:.96rem}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr);row-gap:40px}.step::after{display:none}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* diferenciais */
+.diff{background:var(--ice)}
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.diff-item{background:var(--white);padding:30px 30px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.diff-item .dot{width:12px;height:12px;border-radius:50%;background:var(--green);margin-top:9px;box-shadow:0 0 0 6px color-mix(in srgb,var(--green) 18%,transparent)}
+.diff-item h3{font-size:1.1rem;color:var(--navy);margin-bottom:6px}
+.diff-item p{color:var(--muted);font-size:.96rem}
+@media (max-width:760px){.diff-grid{grid-template-columns:1fr}}
+
+/* depoimentos */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quote{margin:0;border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;gap:18px;align-content:space-between;background:var(--white);position:relative}
+.quote .stars{color:var(--green);letter-spacing:3px;font-size:1rem}
+.ex-tag{position:absolute;top:18px;right:18px;font-family:var(--f-display);font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-deep);border:1.5px dashed var(--green);background:color-mix(in srgb,var(--green) 12%,transparent);padding:4px 9px;border-radius:999px}
+.quote blockquote{margin:0;font-size:1.02rem;color:var(--ink)}
+.quote blockquote::before{content:"“";display:block;font-family:var(--f-display);font-size:3rem;line-height:.6;color:var(--green);margin-bottom:10px}
+.who{display:flex;align-items:center;gap:12px}
+.who i{width:42px;height:42px;border-radius:50%;background:var(--ice);border:1px solid var(--line);display:grid;place-items:center;font-style:normal;font-family:var(--f-display);font-weight:700;color:var(--navy)}
+.who b{display:block;font-size:.95rem}
+.who small{color:var(--muted)}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,80px);align-items:start}
+.faq-list{display:grid;gap:12px;min-width:0}
+details{border:1px solid var(--line);border-radius:12px;background:var(--white)}
+details[open]{border-color:var(--blue)}
+summary{list-style:none;cursor:pointer;padding:20px 56px 20px 22px;font-family:var(--f-display);font-weight:600;color:var(--navy);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:var(--green-deep);font-weight:500}
+details[open] summary::after{content:"–"}
+summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:12px}
+details p{padding:0 22px 22px;color:var(--muted)}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
+
+/* contato */
+.contact{background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;border:2px solid rgba(123,193,67,.25);right:-200px;top:-260px}
+.contact::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:2px solid rgba(30,111,196,.45);right:-90px;top:-150px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,80px);align-items:center;position:relative;z-index:1}
+.contact-copy{display:grid;gap:22px}
+.contact-copy .eyebrow{color:var(--green)}
+.contact-copy h2{font-size:clamp(2rem,4vw,3rem)}
+.contact-copy p{color:#C4D2E6}
+.contact-lines{display:grid;gap:12px;margin-top:6px}
+.contact-lines div{display:flex;gap:12px;align-items:center;color:#E3EBF6}
+.contact-lines svg{width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:2}
+form{background:var(--white);color:var(--ink);border-radius:var(--r);padding:clamp(24px,3vw,36px);display:grid;gap:16px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+form h3{font-size:1.3rem;color:var(--navy)}
+.field{display:grid;gap:6px}
+.field label{font-size:.86rem;font-weight:700;color:var(--navy)}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--ice);color:var(--ink);width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);background:var(--white)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .btn{width:100%}
+.form-note{font-size:.82rem;color:var(--muted)}
+.form-ok{background:color-mix(in srgb,var(--green) 18%,var(--white));border:1px solid var(--green);color:var(--green-deep);padding:12px 14px;border-radius:10px;font-weight:600;font-size:.92rem}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.row2{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--navy-deep);color:#AFC0D8;font-size:.92rem}
+footer .wrap{padding-block:56px 32px;display:grid;gap:36px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+.foot-brand{display:grid;gap:14px;align-content:start}
+.foot-brand .brand b{color:var(--white)}
+.foot-brand .brand small{color:var(--green)}
+footer h4{font-family:var(--f-display);color:var(--white);font-size:.95rem;margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
+.legal{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.84rem}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
+
+/* whatsapp flutuante */
+.wa{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:55;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.45);transition:transform .2s}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:32px;height:32px;fill:#fff}
+
+/* entrada suave */
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy>*:nth-child(2){animation-delay:.08s}
+  .hero-copy>*:nth-child(3){animation-delay:.16s}
+  .hero-copy>*:nth-child(4){animation-delay:.24s}
+  .hero-copy>*:nth-child(5){animation-delay:.32s}
+  @keyframes rise{from{transform:translateY(18px);opacity:.001}to{transform:none;opacity:1}}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+/* ===== catálogo, detalhe e painel ===== */
+.view{min-height:60vh}
+.cat-hero{background:var(--navy-deep);color:var(--white)}
+.cat-hero .wrap{padding-block:56px 40px;display:grid;gap:16px}
+.cat-hero h1{font-size:clamp(2rem,4.4vw,3.2rem)}
+.cat-hero p{color:#C4D2E6;max-width:620px}
+.crumbs{display:flex;gap:10px;font-size:.88rem;color:#9FB4D1}
+.crumbs a{color:#9FB4D1;text-decoration:none}.crumbs a:hover{color:var(--white)}
+.filters{display:flex;flex-wrap:wrap;gap:14px;align-items:end;margin-top:14px;background:var(--white);color:var(--ink);padding:16px;border-radius:var(--r);box-shadow:0 20px 40px -24px rgba(0,0,0,.6)}
+.seg{display:inline-flex;background:var(--ice);border-radius:999px;padding:4px;gap:2px;align-self:end}
+.seg a{display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:999px;text-decoration:none;font-family:var(--f-display);font-weight:600;font-size:.9rem;color:var(--muted);white-space:nowrap}
+.seg a[aria-selected="true"]{background:var(--navy);color:var(--white)}
+.sel{display:grid;gap:5px;font-size:.78rem;font-weight:700;color:var(--navy);min-width:0}
+.sel.grow{flex:1 1 220px}
+.sel select,.sel input{font:inherit;font-size:.95rem;font-weight:500;height:44px;padding:0 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--ice);color:var(--ink);width:100%}
+.sel select:focus,.sel input:focus{outline:none;border-color:var(--blue);background:var(--white)}
+.cat .wrap{padding-block:36px 96px;display:grid;gap:22px}
+.cat-count{color:var(--muted);font-size:.95rem}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (max-width:960px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.cat-grid{grid-template-columns:1fr}.seg{width:100%}.seg a{flex:1;justify-content:center;padding:0 10px}}
+.card{display:grid;grid-template-rows:auto 1fr;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--white);text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(11,42,85,.5);border-color:var(--blue)}
+.card:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.card-ph{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy),var(--blue));display:grid;place-items:center;overflow:hidden}
+.card-ph img.photo{width:100%;height:100%;object-fit:cover}
+.card-ph img.mark{width:72px;opacity:.9}
+.badges{position:absolute;left:12px;top:12px;display:flex;gap:6px;flex-wrap:wrap}
+.badge{font-family:var(--f-display);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+.b-venda{background:var(--green);color:var(--navy-deep)}
+.b-locacao{background:var(--white);color:var(--navy)}
+.b-status{background:var(--navy-deep);color:var(--white)}
+.card-body{padding:18px 20px 22px;display:grid;gap:8px;align-content:start}
+.price{font-family:var(--f-display);font-weight:700;font-size:1.3rem;color:var(--navy);font-variant-numeric:tabular-nums}
+.price small{font-size:.85rem;font-weight:500;color:var(--muted)}
+.card-body h3{font-size:1.02rem;color:var(--ink);font-family:var(--f-body);font-weight:700;letter-spacing:0}
+.loc{color:var(--muted);font-size:.9rem}
+.feats{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.feats span b{font-weight:700}
+.cat-empty{display:grid;justify-items:center;text-align:center;gap:14px;padding:56px 20px;border:1.5px dashed var(--line);border-radius:var(--r);background:var(--ice)}
+.cat-empty img{width:64px}
+.cat-empty h2{font-size:1.5rem;color:var(--navy)}
+.cat-empty p{color:var(--muted);max-width:480px}
+.home-dest{margin-top:56px;display:grid;gap:22px}
+.home-dest-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px}
+.home-dest-head h3{font-size:1.5rem;color:var(--navy)}
+/* detalhe */
+.det .wrap{padding-block:32px 96px;display:grid;gap:28px}
+.back{font-family:var(--f-display);font-weight:600;color:var(--blue);text-decoration:none;font-size:.95rem}
+.det-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+.gal{display:grid;gap:10px;min-width:0}
+.gal-main{aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:linear-gradient(135deg,var(--navy),var(--blue));display:grid;place-items:center}
+.gal-main img.photo{width:100%;height:100%;object-fit:cover}
+.gal-main img.mark{width:96px}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.thumbs button{flex:0 0 92px;height:70px;border-radius:8px;overflow:hidden;border:2px solid transparent;padding:0;cursor:pointer;background:var(--ice)}
+.thumbs button[aria-current="true"]{border-color:var(--green)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.det-info{display:grid;gap:16px;min-width:0;position:sticky;top:100px}
+.det-info h1{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy)}
+.det-price{font-family:var(--f-display);font-weight:700;font-size:2rem;color:var(--navy);font-variant-numeric:tabular-nums}
+.det-price small{font-size:1rem;color:var(--muted);font-weight:500}
+.costs{display:flex;flex-wrap:wrap;gap:6px 20px;color:var(--muted);font-size:.92rem}
+.spec{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.spec div{background:var(--white);padding:14px 16px;display:grid;gap:2px}
+.spec b{font-family:var(--f-display);font-size:1.2rem;color:var(--navy);font-variant-numeric:tabular-nums}
+.spec span{font-size:.8rem;color:var(--muted)}
+.det-desc{white-space:pre-line;color:var(--ink);line-height:1.7}
+.det-code{font-size:.82rem;color:var(--muted)}
+@media (max-width:900px){.det-grid{grid-template-columns:1fr}.det-info{position:static}}
+/* painel */
+.adm .wrap{padding-block:40px 120px;display:grid;gap:24px}
+.adm-loading{color:var(--muted)}
+.adm-card{border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,3vw,32px);background:var(--white);display:grid;gap:14px;max-width:640px}
+.adm-card h1,.adm-head h1{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy)}
+.adm-card p{color:var(--muted)}
+.adm-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
+.who-chip{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;color:var(--muted);background:var(--ice);border:1px solid var(--line);padding:6px 12px 6px 6px;border-radius:999px}
+.who-chip img{width:24px;height:24px;border-radius:50%}
+.notice{padding:12px 16px;border-radius:10px;font-size:.92rem;font-weight:600}
+.n-info{background:color-mix(in srgb,var(--blue) 10%,var(--white));color:var(--navy);border:1px solid color-mix(in srgb,var(--blue) 35%,var(--white))}
+.n-ok{background:color-mix(in srgb,var(--green) 16%,var(--white));color:var(--green-deep);border:1px solid var(--green)}
+.n-err{background:#FDECEC;color:#9B2C2C;border:1px solid #E7A1A1}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r)}
+.tbl{width:100%;border-collapse:collapse;font-size:.92rem;min-width:640px}
+.tbl th{text-align:left;font-family:var(--f-display);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--ice);padding:12px 14px}
+.tbl td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:middle}
+.tbl td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl .th{width:64px;height:48px;border-radius:6px;object-fit:cover;background:var(--ice);display:block}
+.tbl .acts{display:flex;gap:8px;justify-content:flex-end;white-space:nowrap}
+.mini{font:inherit;font-size:.84rem;font-weight:600;padding:8px 12px;border-radius:8px;border:1.5px solid var(--line);background:var(--white);color:var(--navy);cursor:pointer}
+.mini:hover{border-color:var(--blue)}
+.mini.danger{color:#9B2C2C}
+.mini.danger.armed{background:#9B2C2C;color:#fff;border-color:#9B2C2C}
+.mini:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.adm-form{border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3vw,32px);display:grid;gap:18px;background:var(--white);box-shadow:none}
+.adm-form h2{font-size:1.4rem;color:var(--navy)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:760px){.grid3,.grid4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.grid3,.grid4{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:center;font-weight:600;color:var(--navy);font-size:.92rem}
+.check input{width:20px;height:20px;accent-color:var(--green)}
+.drop{border:2px dashed var(--line);border-radius:12px;padding:20px;display:grid;gap:12px;justify-items:start;background:var(--ice)}
+.drop.over{border-color:var(--blue);background:var(--white)}
+.drop p{color:var(--muted);font-size:.9rem}
+.pics{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;width:100%}
+.pic{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--white)}
+.pic img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.pic .pic-acts{display:flex;gap:4px;padding:6px}
+.pic .pic-acts button{flex:1;font:inherit;font-size:.74rem;font-weight:600;padding:6px 4px;border-radius:6px;border:1px solid var(--line);background:var(--white);color:var(--navy);cursor:pointer}
+.pic .cover{position:absolute;left:6px;top:6px;background:var(--green);color:var(--navy-deep);font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:999px}
+.form-acts{display:flex;flex-wrap:wrap;gap:12px}
+.form-acts .btn{width:auto}
+.pubbar{position:sticky;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;background:var(--navy);color:var(--white);padding:14px 18px;border-radius:var(--r);box-shadow:0 20px 40px -20px rgba(7,29,61,.8)}
+.pubbar b{font-family:var(--f-display)}
+.pubbar span{color:#C4D2E6;font-size:.9rem}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none!important}
+</style>
+</head>
+<body>
+<!-- HEADER -->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="PC das Ferreira — início">
+      <img src="assets/emblema.png" alt="" width="48" height="48">
+      <span><b>PC DAS FERREIRA</b><small>Empreendimentos &amp; Engenharia</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#sobre">A construtora</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#imoveis">Imóveis</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn-navy" href="#contato">Solicitar orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+<!-- 1. HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Imobiliária · Construtora · Engenharia</span>
+      <h1>Construímos o lugar onde o seu <em>futuro</em> acontece.</h1>
+      <p class="lead">Compra, venda, locação e administração de imóveis, construção, reformas e infraestrutura de engenharia. Tudo com a mesma equipe, em São Paulo.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-green" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20PC%20das%20Ferreira%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>
+          Falar com um especialista
+        </a>
+        <a class="btn btn-ghost" href="#imoveis">Ver imóveis</a>
+      </div>
+      <nav class="hero-svc" aria-label="Escolha o serviço">
+        <span class="hero-svc-label">O que você precisa?</span>
+        <div class="hero-svc-list">
+          <a href="#imoveis-venda">Comprar</a>
+          <a href="#svc-compra-venda">Vender meu imóvel</a>
+          <a href="#imoveis-locacao">Alugar</a>
+          <a href="#svc-administracao">Administração de imóveis</a>
+          <a href="#svc-construcao">Construção e empreendimentos</a>
+          <a href="#svc-reforma">Reformas</a>
+          <a href="#svc-infra">Infraestrutura de engenharia</a>
+        </div>
+      </nav>
+      <div class="hero-chips">
+        <span>Corretora e construtora</span>
+        <span>Engenharia própria</span>
+        <span>Moema, São Paulo – SP</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. NÚMEROS -->
+<div class="stats" aria-label="Áreas de atuação">
+  <div class="stats-wrap">
+    <div class="wrap" style="padding:0">
+      <a class="stat" href="#imoveis-venda"><strong>Compra e venda</strong><span>Imobiliária completa, da avaliação à escritura</span></a>
+      <a class="stat" href="#imoveis-locacao"><strong>Locação e administração</strong><span>Seu imóvel alugado e bem cuidado</span></a>
+      <a class="stat" href="#svc-construcao"><strong>Construção e reformas</strong><span>Casas, empreendimentos e ampliações</span></a>
+      <a class="stat" href="#svc-infra"><strong>Infraestrutura de engenharia</strong><span>Projetos, laudos e execução</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- 3. SOBRE -->
+<section class="section after-stats" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-media">
+      <img src="assets/fachada-dia.jpg" alt="Fachada de edifício residencial com o letreiro da PC das Ferreira" width="1080" height="1350" loading="lazy">
+      <div class="about-badge">
+        <img src="assets/emblema.png" alt="">
+        <b>Uma empresa voltada para o futuro</b>
+      </div>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">A construtora</span>
+      <h2>Engenharia sólida para construir patrimônio que dura.</h2>
+      <p>A PC das Ferreira Empreendimentos &amp; Engenharia é corretora e construtora. Com escritório em Moema, São Paulo, compra, vende, aluga e administra imóveis, e também constrói, reforma e executa infraestrutura de engenharia.</p>
+      <ul class="checks">
+        <li>Imobiliária e construtora com a mesma equipe</li>
+        <li>Engenharia própria em todas as etapas da obra</li>
+        <li>Documentação e contratos conduzidos com clareza</li>
+        <li>Atendimento direto pelo WhatsApp</li>
+      </ul>
+      <div><a class="btn btn-navy" href="#contato">Conhecer a construtora</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SERVIÇOS -->
+<section class="section services" id="servicos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Imobiliária, construtora e engenharia em um só lugar.</h2>
+      <p>Para comprar, vender, alugar, administrar, construir ou reformar, você fala com a mesma equipe, do primeiro contato à entrega.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc" id="svc-compra-venda">
+        <span class="grp">Imobiliária</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v10h14V10"/><path d="M9.5 15.5l2 2 3.5-4"/></svg></div>
+        <h3>Compra e venda</h3>
+        <p>Intermediação completa na compra e na venda de imóveis: avaliação, divulgação, negociação e toda a documentação até a escritura.</p>
+        <a class="more" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Tenho%20interesse%20em%20compra%20ou%20venda%20de%20im%C3%B3vel." target="_blank" rel="noopener">Falar sobre compra e venda →</a>
+      </article>
+      <article class="svc" id="svc-locacao">
+        <span class="grp">Imobiliária</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></svg></div>
+        <h3>Locação</h3>
+        <p>Imóveis residenciais e comerciais para alugar, com análise de cadastro, contrato e vistoria de entrada e saída.</p>
+        <a class="more" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Tenho%20interesse%20em%20loca%C3%A7%C3%A3o%20de%20im%C3%B3vel." target="_blank" rel="noopener">Falar sobre locação →</a>
+      </article>
+      <article class="svc" id="svc-administracao">
+        <span class="grp">Imobiliária</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <h3>Administração de imóveis</h3>
+        <p>Cuidamos do seu imóvel alugado: cobrança, repasses, manutenção e relação com o inquilino, enquanto você acompanha os resultados.</p>
+        <a class="more" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Quero%20saber%20sobre%20administra%C3%A7%C3%A3o%20de%20im%C3%B3veis." target="_blank" rel="noopener">Falar sobre administração →</a>
+      </article>
+      <article class="svc" id="svc-construcao">
+        <span class="grp">Construtora</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3v19M12 21V8l8 3v10M2 21h20M7 9h2M7 13h2M7 17h2M15 14h2M15 18h2"/></svg></div>
+        <h3>Construção e empreendimentos</h3>
+        <p>Casas sob medida e empreendimentos próprios, do projeto à entrega das chaves, com engenharia em todas as etapas.</p>
+        <a class="more" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Quero%20falar%20sobre%20constru%C3%A7%C3%A3o%20ou%20empreendimentos." target="_blank" rel="noopener">Falar sobre construção →</a>
+      </article>
+      <article class="svc" id="svc-reforma">
+        <span class="grp">Construtora</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M14 4l6 6-9 9H5v-6l9-9zM12 6l6 6"/></svg></div>
+        <h3>Reformas</h3>
+        <p>Reformas e ampliações residenciais e comerciais, com orçamento detalhado, obra organizada e prazo definido.</p>
+        <a class="more" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20reforma." target="_blank" rel="noopener">Pedir orçamento de reforma →</a>
+      </article>
+      <article class="svc" id="svc-infra">
+        <span class="grp">Engenharia</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V11l6-4 6 4v10"/><path d="M2 7l10-5 10 5M10 21v-5h4v5"/></svg></div>
+        <h3>Infraestrutura de engenharia</h3>
+        <p>Projetos, laudos, aprovações e execução de infraestrutura para obras residenciais, comerciais e empreendimentos.</p>
+        <a class="more" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Preciso%20de%20servi%C3%A7os%20de%20infraestrutura%20de%20engenharia." target="_blank" rel="noopener">Falar com a engenharia →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ÁREAS DE ATUAÇÃO -->
+<section class="section" id="empreendimentos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Serviços prestados</span>
+      <h2>Escolha a área e fale direto com quem resolve.</h2>
+      <p>Imobiliária e engenharia trabalhando juntas para comprar, vender, alugar, administrar e construir com segurança.</p>
+    </div>
+    <div class="proj-grid areas">
+      <article class="proj">
+        <figure><img src="assets/bloco-locacao.jpg" alt="Sala de apartamento mobiliado com chaves e contrato de locação sobre a bancada" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
+        <div class="proj-body">
+          <h3>Locação</h3>
+          <p class="proj-desc">Imóveis residenciais e comerciais para alugar, com contrato seguro e vistoria completa.</p>
+          <a href="#imoveis-locacao">Ver imóveis para alugar →</a>
+        </div>
+      </article>
+      <article class="proj">
+        <figure><img src="assets/bloco-venda.jpg" alt="Entrada de edifício com placa de venda da PC das Ferreira" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
+        <div class="proj-body">
+          <h3>Venda</h3>
+          <p class="proj-desc">Apartamentos, casas e imóveis comerciais à venda, com avaliação justa e documentação segura.</p>
+          <a href="#imoveis-venda">Ver imóveis à venda →</a>
+        </div>
+      </article>
+      <article class="proj">
+        <figure><img src="assets/bloco-administracao.jpg" alt="Mesa de escritório com relatórios, pastas e chaves de imóveis administrados" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
+        <div class="proj-body">
+          <h3>Administração</h3>
+          <p class="proj-desc">Cobrança, repasses, manutenção e atendimento ao inquilino. Seu imóvel rendendo sem dor de cabeça.</p>
+          <a href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Quero%20saber%20sobre%20administra%C3%A7%C3%A3o%20de%20im%C3%B3veis." target="_blank" rel="noopener">Quero que administrem →</a>
+        </div>
+      </article>
+      <article class="proj wide">
+        <figure><img src="assets/bloco-compra-venda.jpg" alt="Aperto de mãos sobre contrato de compra e venda, maquete de casa e chaves" loading="lazy"><span class="tag ready">Imobiliária</span></figure>
+        <div class="proj-body">
+          <h3>Compra e venda</h3>
+          <p class="proj-desc">Intermediação completa entre comprador e vendedor: busca do imóvel certo, negociação, documentação e escritura.</p>
+          <a href="#imoveis">Ver todos os imóveis →</a>
+        </div>
+      </article>
+      <article class="proj wide">
+        <figure><img src="assets/bloco-infra.jpg" alt="Engenheiro com capacete e tablet observando obra com grua" loading="lazy"><span class="tag works">Engenharia</span></figure>
+        <div class="proj-body">
+          <h3>Infraestrutura de engenharia</h3>
+          <p class="proj-desc">Projetos, laudos, aprovações e execução de infraestrutura para obras residenciais, comerciais e empreendimentos.</p>
+          <a href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Preciso%20de%20servi%C3%A7os%20de%20infraestrutura%20de%20engenharia." target="_blank" rel="noopener">Falar com a engenharia →</a>
+        </div>
+      </article>
+    </div>
+    <div class="home-dest" id="home-destaques" hidden>
+      <div class="home-dest-head"><h3>Imóveis disponíveis</h3><a class="btn btn-navy" href="#imoveis">Ver todos os imóveis</a></div>
+      <div class="cat-grid" id="home-dest-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. VÍDEO -->
+<section class="section film" id="video">
+  <div class="wrap film-grid">
+    <div class="film-copy">
+      <span class="eyebrow">Por dentro da PC das Ferreira</span>
+      <h2>Cada detalhe pensado para valorizar o seu imóvel.</h2>
+      <p>Arquitetura contemporânea, áreas verdes integradas e acabamentos que resistem ao tempo. É assim que a PC das Ferreira assina cada fachada que entrega.</p>
+      <div><a class="btn btn-green" href="#contato">Agendar uma visita</a></div>
+    </div>
+    <div class="film-video">
+      <video src="assets/fachada-zoom.mp4" poster="assets/fachada-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo da fachada com aproximação até o letreiro da PC das Ferreira"></video>
+    </div>
+  </div>
+</section>
+
+<!-- 7. PROCESSO -->
+<section class="section" id="processo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Do primeiro contato à entrega das chaves.</h2>
+      <p>Um processo claro, com você informado em cada etapa.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Conversa inicial</h3><p>Entendemos o seu objetivo, o terreno ou o imóvel desejado e o investimento previsto.</p></div>
+      <div class="step"><h3>Projeto e orçamento</h3><p>Desenvolvemos o projeto e apresentamos orçamento detalhado e cronograma.</p></div>
+      <div class="step"><h3>Execução da obra</h3><p>Equipe técnica própria, compras controladas e relatórios de evolução.</p></div>
+      <div class="step"><h3>Entrega das chaves</h3><p>Vistoria final, documentação em dia e suporte após a entrega.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. CONTATO -->
+<section class="section contact" id="contato">
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <span class="eyebrow">Vamos conversar</span>
+      <h2>Seu próximo endereço começa com uma conversa.</h2>
+      <p>Conte o que você quer construir ou comprar. Um especialista da PC das Ferreira retorna com as próximas etapas.</p>
+      <div class="contact-lines">
+        <div><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><a href="https://wa.me/5511996041466" target="_blank" rel="noopener">(11) 99604-1466</a> · <a href="https://wa.me/5511994032789" target="_blank" rel="noopener">(11) 99403-2789</a></span></div>
+        <div><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg><span><a href="mailto:assessoriadrpaulocesar@gmail.com">assessoriadrpaulocesar@gmail.com</a></span></div>
+        <div><svg viewBox="0 0 24 24"><path d="M12 22s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Alameda dos Maracatins, 1435 · Moema, São Paulo – SP</span></div>
+      </div>
+    </div>
+    <form id="leadForm" novalidate>
+      <h3>Solicite um atendimento</h3>
+      <div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome completo"></div>
+      <div class="row2">
+        <div class="field"><label for="f-tel">WhatsApp</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" required placeholder="(00) 00000-0000"></div>
+        <div class="field"><label for="f-cidade">Cidade</label><input id="f-cidade" name="cidade" type="text" placeholder="Onde fica o imóvel"></div>
+      </div>
+      <div class="field"><label for="f-int">Tenho interesse em</label>
+        <select id="f-int" name="interesse">
+          <option>Comprar um imóvel</option>
+          <option>Vender um imóvel</option>
+          <option>Alugar um imóvel</option>
+          <option>Administração do meu imóvel</option>
+          <option>Construção ou empreendimentos</option>
+          <option>Reforma</option>
+          <option>Infraestrutura de engenharia</option>
+          <option>Outro assunto</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-msg">Mensagem</label><textarea id="f-msg" name="msg" rows="3" placeholder="Conte um pouco sobre o que você precisa"></textarea></div>
+      <button class="btn btn-green" type="submit">Continuar no WhatsApp</button>
+      <p class="form-note" id="formNote">Ao continuar, sua mensagem fica pronta para envio no WhatsApp da PC das Ferreira.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- CATÁLOGO DE IMÓVEIS -->
+<div class="view" id="view-imoveis" hidden>
+  <section class="cat-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Caminho"><a href="#inicio">Início</a><span>/</span><span id="cat-crumb">Imóveis</span></nav>
+      <h1 id="cat-title">Imóveis à venda e para alugar</h1>
+      <p>Apartamentos, casas e imóveis comerciais selecionados pela PC das Ferreira em São Paulo.</p>
+      <div class="filters" role="search">
+        <div class="seg" role="tablist" aria-label="Finalidade">
+          <a href="#imoveis" data-fin="todos" role="tab">Todos</a>
+          <a href="#imoveis-venda" data-fin="venda" role="tab">Comprar</a>
+          <a href="#imoveis-locacao" data-fin="locacao" role="tab">Alugar</a>
+        </div>
+        <label class="sel"><span>Tipo</span>
+          <select id="flt-tipo"><option value="">Todos os tipos</option><option>Apartamento</option><option>Casa</option><option>Cobertura</option><option>Comercial</option><option>Terreno</option></select>
+        </label>
+        <label class="sel"><span>Ordenar</span>
+          <select id="flt-ordem"><option value="recentes">Mais recentes</option><option value="menor">Menor preço</option><option value="maior">Maior preço</option></select>
+        </label>
+        <label class="sel grow"><span>Bairro ou palavra-chave</span>
+          <input id="flt-busca" type="search" placeholder="Ex.: Moema, piscina, 3 quartos">
+        </label>
+      </div>
+    </div>
+  </section>
+  <section class="cat">
+    <div class="wrap">
+      <p class="cat-count" id="cat-count" aria-live="polite"></p>
+      <div class="cat-grid" id="cat-grid"></div>
+      <div class="cat-empty" id="cat-empty" hidden>
+        <img src="assets/emblema.png" alt="">
+        <h2 id="cat-empty-title">Novos imóveis em breve</h2>
+        <p id="cat-empty-text">Estamos cadastrando os imóveis disponíveis. Conte o que você procura e avisamos assim que surgir a opção certa.</p>
+        <a class="btn btn-green" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Estou%20procurando%20um%20im%C3%B3vel." target="_blank" rel="noopener">Contar o que procuro</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- DETALHE DO IMÓVEL -->
+<div class="view" id="view-imovel" hidden>
+  <section class="det">
+    <div class="wrap" id="det-root"></div>
+  </section>
+</div>
+
+<!-- PAINEL DO ADMINISTRADOR -->
+<div class="view" id="view-painel" hidden>
+  <section class="adm">
+    <div class="wrap" id="adm-root">
+      <p class="adm-loading">Verificando acesso…</p>
+    </div>
+  </section>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#inicio"><img src="assets/emblema.png" alt="" width="48"><span><b>PC DAS FERREIRA</b><small>Empreendimentos &amp; Engenharia</small></span></a>
+        <p>Uma empresa voltada para o futuro.</p>
+      </div>
+      <div><h4>Navegação</h4><ul><li><a href="#sobre">A construtora</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#imoveis">Imóveis</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a href="https://wa.me/5511996041466" target="_blank" rel="noopener">(11) 99604-1466</a></li><li><a href="https://wa.me/5511994032789" target="_blank" rel="noopener">(11) 99403-2789</a></li><li>Alameda dos Maracatins, 1435<br>Moema, São Paulo – SP</li><li><a href="mailto:assessoriadrpaulocesar@gmail.com">assessoriadrpaulocesar@gmail.com</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>P C da S Ferreira Empreendimentos Ltda. · CNPJ 13.588.690/0001-93</span>
+      <span>© 2026 PC das Ferreira. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20PC%20das%20Ferreira." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>
+</a>
+
+<script type="application/json" id="imoveis-data">[]</script>
+<script>
+(function(){
+  var WA='5511996041466';
+  var RESET=':root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}img{max-width:100%}[hidden]{display:none!important}';
+  var DATA=[];
+  try{DATA=JSON.parse(document.getElementById('imoveis-data').textContent||'[]');if(!Array.isArray(DATA))DATA=[];}catch(e){DATA=[];}
+  var $=function(id){return document.getElementById(id)};
+  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function okId(id){return typeof id==='string'&&/^[A-Za-z0-9_-]{8,80}$/.test(id)}
+  function img(id){return okId(id)?'/_blob/'+id:''}
+  var brl=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+  function money(n){n=Number(n);return n>0?brl.format(n):''}
+  function priceHTML(im){var p=money(im.preco);if(!p)return 'Consulte';return esc(p)+(im.finalidade==='locacao'?' <small>/mês</small>':'')}
+  var FIN={venda:'Venda',locacao:'Locação'};
+  var ST={disponivel:'',reservado:'Reservado',vendido:'Vendido',alugado:'Alugado'};
+  function feats(im){var a=[];
+    if(+im.area)a.push('<span><b>'+esc(im.area)+'</b> m²</span>');
+    if(+im.quartos)a.push('<span><b>'+esc(im.quartos)+'</b> '+(+im.quartos>1?'quartos':'quarto')+'</span>');
+    if(+im.suites)a.push('<span><b>'+esc(im.suites)+'</b> '+(+im.suites>1?'suítes':'suíte')+'</span>');
+    if(+im.vagas)a.push('<span><b>'+esc(im.vagas)+'</b> '+(+im.vagas>1?'vagas':'vaga')+'</span>');
+    return a.join('')}
+  function cardHTML(im){
+    var f=(im.fotos||[]).filter(okId)[0];
+    var ph=f?'<img class="photo" src="'+img(f)+'" alt="" loading="lazy">':'<img class="mark" src="assets/emblema.png" alt="">';
+    var st=ST[im.status]?'<span class="badge b-status">'+esc(ST[im.status])+'</span>':'';
+    return '<a class="card" href="#imovel-'+esc(im.id)+'"><div class="card-ph">'+ph+'<div class="badges"><span class="badge b-'+(im.finalidade==='locacao'?'locacao':'venda')+'">'+esc(FIN[im.finalidade]||'Venda')+'</span>'+st+'</div></div>'+
+      '<div class="card-body"><div class="price">'+priceHTML(im)+'</div><h3>'+esc(im.titulo||'Imóvel')+'</h3><div class="loc">'+esc([im.tipo,im.bairro,im.cidade].filter(Boolean).join(' · '))+'</div>'+
+      (feats(im)?'<div class="feats">'+feats(im)+'</div>':'')+'</div></a>'}
+  function visible(list){return list.filter(function(im){return im&&im.id&&im.publicado!==false})}
+  function sorted(list,ord){var l=list.slice();
+    if(ord==='menor')l.sort(function(a,b){return (+a.preco||9e15)-(+b.preco||9e15)});
+    else if(ord==='maior')l.sort(function(a,b){return (+b.preco||0)-(+a.preco||0)});
+    else l.sort(function(a,b){return (b.destaque?1:0)-(a.destaque?1:0)||(b.criadoEm||0)-(a.criadoEm||0)});
+    return l}
+
+  /* ---------- home: destaques ---------- */
+  function renderHome(){
+    var l=sorted(visible(DATA).filter(function(im){return im.status!=='vendido'&&im.status!=='alugado'}),'recentes').slice(0,3);
+    $('home-destaques').hidden=!l.length;
+    $('home-dest-grid').innerHTML=l.map(cardHTML).join('');
+  }
+
+  /* ---------- catálogo ---------- */
+  var fin='todos';
+  function renderCat(){
+    var tipo=$('flt-tipo').value, q=$('flt-busca').value.trim().toLowerCase(), ord=$('flt-ordem').value;
+    document.querySelectorAll('.seg a').forEach(function(a){a.setAttribute('aria-selected',a.dataset.fin===fin?'true':'false')});
+    var titles={todos:['Imóveis à venda e para alugar','Imóveis'],venda:['Imóveis à venda','Comprar'],locacao:['Imóveis para alugar','Alugar']};
+    $('cat-title').textContent=titles[fin][0]; $('cat-crumb').textContent=titles[fin][1];
+    var all=visible(DATA);
+    var l=all.filter(function(im){
+      if(fin!=='todos'&&im.finalidade!==fin)return false;
+      if(tipo&&im.tipo!==tipo)return false;
+      if(q){var hay=[im.titulo,im.bairro,im.cidade,im.tipo,im.descricao,im.codigo,(im.quartos?im.quartos+' quartos':'')].join(' ').toLowerCase();if(hay.indexOf(q)<0)return false}
+      return true});
+    l=sorted(l,ord);
+    $('cat-grid').innerHTML=l.map(cardHTML).join('');
+    $('cat-grid').hidden=!l.length;
+    $('cat-empty').hidden=!!l.length;
+    if(!all.length){$('cat-empty-title').textContent='Novos imóveis em breve';$('cat-empty-text').textContent='Estamos cadastrando os imóveis disponíveis. Conte o que você procura e avisamos assim que surgir a opção certa.'}
+    else{$('cat-empty-title').textContent='Nenhum imóvel com esses filtros';$('cat-empty-text').textContent='Tente outro tipo ou bairro, ou conte o que você procura que a nossa equipe encontra para você.'}
+    $('cat-count').textContent=l.length?(l.length+(l.length>1?' imóveis encontrados':' imóvel encontrado')):'';
+  }
+  ['flt-tipo','flt-ordem'].forEach(function(id){$(id).addEventListener('change',renderCat)});
+  $('flt-busca').addEventListener('input',renderCat);
+
+  /* ---------- detalhe ---------- */
+  function renderDet(id){
+    var im=visible(DATA).filter(function(x){return x.id===id})[0], root=$('det-root');
+    if(!im){root.innerHTML='<a class="back" href="#imoveis">← Voltar aos imóveis</a><div class="cat-empty"><img src="assets/emblema.png" alt=""><h2>Imóvel não encontrado</h2><p>Ele pode ter sido vendido ou retirado do site.</p><a class="btn btn-navy" href="#imoveis">Ver imóveis disponíveis</a></div>';return}
+    var fotos=(im.fotos||[]).filter(okId);
+    var main=fotos.length?'<img class="photo" id="gal-img" src="'+img(fotos[0])+'" alt="Foto de '+esc(im.titulo)+'">':'<img class="mark" src="assets/emblema.png" alt="">';
+    var th=fotos.length>1?'<div class="thumbs">'+fotos.map(function(f,i){return '<button type="button" data-src="'+img(f)+'" aria-label="Foto '+(i+1)+'" aria-current="'+(i===0)+'"><img src="'+img(f)+'" alt="" loading="lazy"></button>'}).join('')+'</div>':'';
+    var spec=[['area','m²'],['quartos','Quartos'],['suites','Suítes'],['banheiros','Banheiros'],['vagas','Vagas']].filter(function(k){return +im[k[0]]}).map(function(k){return '<div><b>'+esc(im[k[0]])+'</b><span>'+k[1]+'</span></div>'}).join('');
+    var costs=[];if(money(im.condominio))costs.push('Condomínio '+esc(money(im.condominio)));if(money(im.iptu))costs.push('IPTU '+esc(money(im.iptu)));
+    var msg='Olá! Tenho interesse no imóvel "'+(im.titulo||'')+'"'+(im.codigo?' (cód. '+im.codigo+')':'')+' que vi no site da PC das Ferreira.';
+    var st=ST[im.status]?'<span class="badge b-status">'+esc(ST[im.status])+'</span>':'';
+    root.innerHTML='<a class="back" href="#imoveis'+(im.finalidade==='locacao'?'-locacao':'-venda')+'">← Voltar aos imóveis</a>'+
+      '<div class="det-grid"><div class="gal"><div class="gal-main">'+main+'</div>'+th+'</div>'+
+      '<div class="det-info"><div class="badges" style="position:static"><span class="badge b-'+(im.finalidade==='locacao'?'locacao':'venda')+'" style="border:1px solid var(--line)">'+esc(FIN[im.finalidade]||'Venda')+'</span>'+st+'</div>'+
+      '<h1>'+esc(im.titulo||'Imóvel')+'</h1><div class="loc">'+esc([im.tipo,im.bairro,im.cidade].filter(Boolean).join(' · '))+'</div>'+
+      '<div class="det-price">'+priceHTML(im)+'</div>'+(costs.length?'<div class="costs">'+costs.map(function(c){return '<span>'+c+'</span>'}).join('')+'</div>':'')+
+      (spec?'<div class="spec">'+spec+'</div>':'')+
+      '<a class="btn btn-green" href="https://wa.me/'+WA+'?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Tenho interesse neste imóvel</a>'+
+      (im.codigo?'<div class="det-code">Código do imóvel: '+esc(im.codigo)+'</div>':'')+'</div></div>'+
+      (im.descricao?'<div class="adm-card" style="max-width:none"><h2 style="font-size:1.3rem;color:var(--navy)">Sobre o imóvel</h2><p class="det-desc"></p></div>':'');
+    var d=root.querySelector('.det-desc'); if(d) d.textContent=im.descricao;
+    root.querySelectorAll('.thumbs button').forEach(function(b){b.addEventListener('click',function(){
+      $('gal-img').src=b.dataset.src; root.querySelectorAll('.thumbs button').forEach(function(x){x.setAttribute('aria-current','false')}); b.setAttribute('aria-current','true')})});
+  }
+
+  /* ---------- roteamento ---------- */
+  var views=['view-imoveis','view-imovel','view-painel'];
+  function show(v){$('home').hidden=!!v;views.forEach(function(x){$(x).hidden=x!==v});document.querySelector('footer').hidden=false}
+  function route(){
+    var h=(location.hash||'').slice(1);
+    if(h==='imoveis'||h==='imoveis-venda'||h==='imoveis-locacao'){fin=h==='imoveis'?'todos':h.slice(8);show('view-imoveis');renderCat();window.scrollTo(0,0);return}
+    if(h.indexOf('imovel-')===0){show('view-imovel');renderDet(h.slice(7));window.scrollTo(0,0);return}
+    if(h==='painel'){show('view-painel');openPanel();window.scrollTo(0,0);return}
+    var wasHidden=$('home').hidden; show(null);
+    if(h){var el=document.getElementById(h); if(el&&wasHidden) requestAnimationFrame(function(){el.scrollIntoView()})} else if(wasHidden) window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);
+  renderHome(); route();
+
+  /* ---------- painel do administrador ---------- */
+  var DRAFT_KEY='pcf-imoveis-draft', panelReady=false, work=null, editing=null, assets=null, artifactNs=null;
+  function ss(k,v){try{if(v===undefined)return sessionStorage.getItem(k);if(v===null)sessionStorage.removeItem(k);else sessionStorage.setItem(k,v)}catch(e){return null}}
+  function clone(x){return JSON.parse(JSON.stringify(x))}
+  function dirty(){return JSON.stringify(work)!==JSON.stringify(DATA)}
+  function saveDraft(){if(dirty())ss(DRAFT_KEY,JSON.stringify(work));else ss(DRAFT_KEY,null)}
+
+  async function openPanel(){
+    if(panelReady){renderPanel();return}
+    var root=$('adm-root');
+    var cl=window.claude;
+    if(!cl||typeof cl.use!=='function'){root.innerHTML=accessCard('Painel indisponível aqui','Abra o site pelo link do Claude, com a sua conta, para gerenciar os imóveis.');return}
+    var user=await cl.use('user');
+    if(!user){root.innerHTML=accessCard('Entre para continuar','Faça login no Claude com o e-mail autorizado como administrador e abra esta página novamente.');return}
+    var me=await user.me();
+    if(!me.canEdit){
+      root.innerHTML=accessCard('Acesso restrito','Esta área é só para administradores. O dono do site libera o acesso pelo e-mail da pessoa, no menu Compartilhar, com permissão de edição.'+(me.email?' Você está conectado como '+esc(me.email)+'.':''));
+      return}
+    assets=await cl.use('assets'); artifactNs=await cl.use('artifact');
+    work=clone(DATA);
+    var d=ss(DRAFT_KEY); if(d){try{var p=JSON.parse(d);if(Array.isArray(p))work=p}catch(e){}}
+    panelReady=true; panelMe=me; renderPanel();
+    var flash=ss('pcf-flash'); if(flash){ss('pcf-flash',null);note('Site publicado. Os imóveis já aparecem para os visitantes.','ok')}
+  }
+  var panelMe=null, noteState=null;
+  function accessCard(t,p){return '<div class="adm-card"><h1>'+esc(t)+'</h1><p>'+p+'</p><div><a class="btn btn-navy" href="#inicio">Voltar ao site</a></div></div>'}
+  function note(msg,kind){noteState={msg:msg,kind:kind||'info'};var n=$('adm-note');if(n){n.className='notice n-'+noteState.kind;n.textContent=msg;n.hidden=false}}
+
+  function renderPanel(){
+    var root=$('adm-root'); if(!work)return;
+    var rows=work.map(function(im,i){var f=(im.fotos||[]).filter(okId)[0];
+      return '<tr><td>'+(f?'<img class="th" src="'+img(f)+'" alt="">':'<span class="th"></span>')+'</td><td><b>'+esc(im.titulo||'Sem título')+'</b><br><span class="loc">'+esc(im.codigo||'')+' · '+esc([im.tipo,im.bairro].filter(Boolean).join(' · '))+'</span></td><td>'+esc(FIN[im.finalidade]||'')+'</td><td class="num">'+esc(money(im.preco)||'Consulte')+'</td><td>'+esc(ST[im.status]||'Disponível')+(im.publicado===false?' · oculto':'')+'</td>'+
+        '<td><div class="acts"><button class="mini" data-act="edit" data-i="'+i+'">Editar</button><button class="mini danger" data-act="del" data-i="'+i+'">Excluir</button></div></td></tr>'}).join('');
+    root.innerHTML='<div class="adm-head"><div style="display:grid;gap:8px"><span class="eyebrow">Área do administrador</span><h1>Imóveis do site</h1></div>'+
+      '<span class="who-chip"><img src="'+esc(panelMe.avatarUrl)+'" alt="">'+esc(panelMe.email||panelMe.name||'Administrador')+'</span></div>'+
+      '<div id="adm-note" class="notice" hidden></div>'+
+      '<div class="form-acts"><button class="btn btn-green" id="adm-new" type="button">+ Adicionar imóvel</button><a class="btn btn-navy" href="#imoveis">Ver como visitante</a></div>'+
+      '<div id="adm-form-slot"></div>'+
+      (work.length?'<div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th>Imóvel</th><th>Finalidade</th><th>Preço</th><th>Situação</th><th></th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+        :'<div class="cat-empty"><img src="assets/emblema.png" alt=""><h2>Nenhum imóvel cadastrado</h2><p>Clique em “Adicionar imóvel” para cadastrar o primeiro, com fotos, preço e descrição.</p></div>')+
+      '<div class="pubbar" id="pubbar"><div><b id="pub-title"></b><br><span id="pub-sub"></span></div><button class="btn btn-green" id="pub-btn" type="button">Publicar no site</button></div>';
+    if(noteState)note(noteState.msg,noteState.kind);
+    $('adm-new').addEventListener('click',function(){openForm(null)});
+    root.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+      var i=+b.dataset.i;
+      if(b.dataset.act==='edit')openForm(i);
+      else if(b.classList.contains('armed')){work.splice(i,1);saveDraft();noteState=null;renderPanel()}
+      else{b.classList.add('armed');b.textContent='Confirmar exclusão';setTimeout(function(){if(b.isConnected){b.classList.remove('armed');b.textContent='Excluir'}},4000)}
+    })});
+    $('pub-btn').addEventListener('click',publish);
+    updateBar();
+    if(editing!==null&&editing!==undefined&&editing!=='closed')openForm(editing===-1?null:editing);
+  }
+  function updateBar(){
+    var d=dirty(), can=!!artifactNs;
+    $('pub-title').textContent=d?'Alterações não publicadas':'Site atualizado';
+    $('pub-sub').textContent=d?'Publique para que os visitantes vejam as mudanças.':'Todos os imóveis desta lista já estão no ar.';
+    $('pub-btn').disabled=!d||!can;
+  }
+
+  function openForm(i){
+    editing=(i===null?-1:i);
+    var im=i===null?{finalidade:'venda',tipo:'Apartamento',status:'disponivel',cidade:'São Paulo – SP',fotos:[],publicado:true}:clone(work[i]);
+    var slot=$('adm-form-slot');
+    function opt(list,val){return list.map(function(o){var v=Array.isArray(o)?o[0]:o,t=Array.isArray(o)?o[1]:o;return '<option value="'+esc(v)+'"'+(v===val?' selected':'')+'>'+esc(t)+'</option>'}).join('')}
+    function inp(id,label,val,type,extra){return '<div class="field"><label for="im-'+id+'">'+label+'</label><input id="im-'+id+'" type="'+(type||'text')+'" value="'+esc(val==null?'':val)+'"'+(extra||'')+'></div>'}
+    slot.innerHTML='<form class="adm-form" id="im-form" novalidate><h2>'+(i===null?'Novo imóvel':'Editar imóvel')+'</h2>'+
+      inp('titulo','Título do anúncio *',im.titulo,'text',' placeholder="Ex.: Apartamento 3 quartos com varanda em Moema" maxlength="120"')+
+      '<div class="grid4"><div class="field"><label for="im-finalidade">Finalidade *</label><select id="im-finalidade">'+opt([['venda','Venda'],['locacao','Locação']],im.finalidade)+'</select></div>'+
+      '<div class="field"><label for="im-tipo">Tipo *</label><select id="im-tipo">'+opt(['Apartamento','Casa','Cobertura','Comercial','Terreno'],im.tipo)+'</select></div>'+
+      '<div class="field"><label for="im-status">Situação</label><select id="im-status">'+opt([['disponivel','Disponível'],['reservado','Reservado'],['vendido','Vendido'],['alugado','Alugado']],im.status)+'</select></div>'+
+      inp('preco','Preço (R$) *',im.preco,'number',' min="0" step="1" inputmode="numeric" placeholder="Venda total ou aluguel mensal"')+'</div>'+
+      '<div class="grid3">'+inp('condominio','Condomínio (R$/mês)',im.condominio,'number',' min="0" step="1"')+inp('iptu','IPTU (R$/ano)',im.iptu,'number',' min="0" step="1"')+inp('area','Área útil (m²)',im.area,'number',' min="0" step="1"')+'</div>'+
+      '<div class="grid4">'+inp('quartos','Quartos',im.quartos,'number',' min="0" step="1"')+inp('suites','Suítes',im.suites,'number',' min="0" step="1"')+inp('banheiros','Banheiros',im.banheiros,'number',' min="0" step="1"')+inp('vagas','Vagas',im.vagas,'number',' min="0" step="1"')+'</div>'+
+      '<div class="grid3">'+inp('bairro','Bairro *',im.bairro,'text',' maxlength="60"')+inp('cidade','Cidade',im.cidade,'text',' maxlength="60"')+inp('codigo','Código',im.codigo||nextCode(),'text',' maxlength="20"')+'</div>'+
+      '<div class="field"><label for="im-descricao">Descrição</label><textarea id="im-descricao" rows="6" maxlength="4000" placeholder="Diferenciais, lazer, acabamento, proximidades…"></textarea></div>'+
+      '<div class="drop" id="im-drop"><b style="color:var(--navy)">Fotos</b><p>Envie até 20 fotos (JPG, PNG ou WebP). A primeira é a capa do anúncio.</p><div class="pics" id="im-pics"></div>'+
+      '<label class="mini" for="im-files" style="cursor:pointer">Escolher fotos</label><input id="im-files" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden><span id="im-up" class="loc" aria-live="polite"></span></div>'+
+      '<label class="check"><input type="checkbox" id="im-destaque"'+(im.destaque?' checked':'')+'> Destacar na página inicial</label>'+
+      '<label class="check"><input type="checkbox" id="im-publicado"'+(im.publicado!==false?' checked':'')+'> Mostrar no site</label>'+
+      '<div id="im-err" class="notice n-err" hidden></div>'+
+      '<div class="form-acts"><button class="btn btn-green" type="submit">Salvar imóvel</button><button class="btn btn-navy" type="button" id="im-cancel">Cancelar</button></div></form>';
+    $('im-descricao').value=im.descricao||'';
+    var fotos=(im.fotos||[]).filter(okId);
+    function drawPics(){
+      $('im-pics').innerHTML=fotos.map(function(f,k){return '<div class="pic">'+(k===0?'<span class="cover">Capa</span>':'')+'<img src="'+img(f)+'" alt=""><div class="pic-acts">'+(k>0?'<button type="button" data-k="'+k+'" data-a="cover">Tornar capa</button>':'')+'<button type="button" data-k="'+k+'" data-a="rm">Remover</button></div></div>'}).join('');
+      $('im-pics').querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){var k=+b.dataset.k;if(b.dataset.a==='rm')fotos.splice(k,1);else{var x=fotos.splice(k,1)[0];fotos.unshift(x)}drawPics()})});
+    }
+    drawPics();
+    if(!assets){$('im-up').textContent='Envio de fotos indisponível nesta visualização.';$('im-files').disabled=true}
+    async function handleFiles(list){
+      if(!assets)return; var files=[].slice.call(list).filter(function(f){return /^image\/(jpeg|png|webp)$/.test(f.type)});
+      if(!files.length){$('im-up').textContent='Escolha arquivos JPG, PNG ou WebP.';return}
+      files=files.slice(0,Math.max(0,20-fotos.length));
+      for(var k=0;k<files.length;k++){
+        $('im-up').textContent='Enviando foto '+(k+1)+' de '+files.length+'…';
+        try{var blob=await shrink(files[k]);var r=await assets.upload(blob,{type:blob.type});fotos.push(r.id);drawPics()}
+        catch(e){var c=e&&e.code;$('im-up').textContent=c==='too_large'?'Uma foto passou de 20 MB e foi ignorada.':c==='quota_or_state'?'O espaço de armazenamento acabou. Remova fotos antigas e tente de novo.':c==='rate_limited'?'Muitos envios seguidos. Aguarde um pouco e tente de novo.':'Não foi possível enviar uma das fotos. Tente novamente.';return}
+      }
+      $('im-up').textContent=files.length+(files.length>1?' fotos enviadas.':' foto enviada.');
+    }
+    $('im-files').addEventListener('change',function(e){handleFiles(e.target.files);e.target.value=''});
+    var drop=$('im-drop');
+    drop.addEventListener('dragover',function(e){e.preventDefault();drop.classList.add('over')});
+    drop.addEventListener('dragleave',function(){drop.classList.remove('over')});
+    drop.addEventListener('drop',function(e){e.preventDefault();drop.classList.remove('over');handleFiles(e.dataTransfer.files)});
+    $('im-cancel').addEventListener('click',function(){editing='closed';slot.innerHTML=''});
+    $('im-form').addEventListener('submit',function(e){
+      e.preventDefault();
+      var v=function(id){return $('im-'+id).value.trim()}, n=function(id){var x=parseFloat(v(id).replace(',','.'));return isFinite(x)&&x>0?Math.round(x):0};
+      var miss=[];if(!v('titulo'))miss.push('título');if(!n('preco'))miss.push('preço');if(!v('bairro'))miss.push('bairro');
+      if(miss.length){$('im-err').textContent='Preencha: '+miss.join(', ')+'.';$('im-err').hidden=false;$('im-'+(!v('titulo')?'titulo':!n('preco')?'preco':'bairro')).focus();return}
+      var out={id:im.id||('im'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)),codigo:v('codigo')||nextCode(),titulo:v('titulo'),finalidade:v('finalidade'),tipo:v('tipo'),status:v('status'),
+        preco:n('preco'),condominio:n('condominio'),iptu:n('iptu'),area:n('area'),quartos:n('quartos'),suites:n('suites'),banheiros:n('banheiros'),vagas:n('vagas'),
+        bairro:v('bairro'),cidade:v('cidade'),descricao:$('im-descricao').value.trim(),fotos:fotos.slice(),destaque:$('im-destaque').checked,publicado:$('im-publicado').checked,criadoEm:im.criadoEm||Date.now()};
+      if(i===null)work.unshift(out);else work[i]=out;
+      editing='closed'; saveDraft(); noteState={msg:'Imóvel salvo na lista. Clique em “Publicar no site” para colocá-lo no ar.',kind:'info'}; renderPanel();
+    });
+    slot.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function nextCode(){var m=0;(work||[]).forEach(function(im){var x=/(\d+)$/.exec(im.codigo||'');if(x)m=Math.max(m,+x[1])});return 'PCF-'+String(m+1).padStart(3,'0')}
+  function shrink(file){return new Promise(function(res){
+    var url=URL.createObjectURL(file), im=new Image();
+    im.onload=function(){var max=1800,w=im.naturalWidth,h=im.naturalHeight,s=Math.min(1,max/Math.max(w,h));
+      var c=document.createElement('canvas');c.width=Math.round(w*s);c.height=Math.round(h*s);c.getContext('2d').drawImage(im,0,0,c.width,c.height);
+      URL.revokeObjectURL(url);c.toBlob(function(b){res(b&&b.size<file.size?b:file)},'image/jpeg',0.84)};
+    im.onerror=function(){URL.revokeObjectURL(url);res(file)};im.src=url})}
+
+  async function publish(){
+    if(!artifactNs||!dirty())return;
+    var b=$('pub-btn'); b.disabled=true; b.textContent='Publicando…';
+    try{
+      var r=await fetch('template.html',{cache:'no-store'}); if(!r.ok)throw {code:'template'};
+      var t=await r.text(), open='<script type="application/json" id="imoveis-data">', i0=t.indexOf(open);
+      if(i0<0)throw {code:'template'}; var i1=t.indexOf('</'+'script>',i0);
+      var json=JSON.stringify(work).replace(/</g,'\\u003c');
+      var content=t.slice(0,i0+open.length)+json+t.slice(i1);
+      var html='<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+RESET+'</style></head><body>'+content+'</body></html>';
+      ss(DRAFT_KEY,null); ss('pcf-flash','1');
+      await artifactNs.publish(html);
+    }catch(e){
+      ss('pcf-flash',null); saveDraft();
+      var c=e&&e.code;
+      if(c==='conflict'){note('Outra pessoa publicou antes de você. A página vai recarregar; suas alterações ficaram guardadas como rascunho.','info');return}
+      b.textContent='Publicar no site'; updateBar();
+      note(c==='not_writer'||c==='not_granted'?'Sua conta não tem permissão para publicar. Peça ao dono do site acesso de edição.':c==='too_large'?'A página ficou grande demais. Reduza descrições ou imóveis antigos.':c==='rate_limited'?'Muitas publicações seguidas. Aguarde um minuto e tente de novo.':c==='template'?'Não foi possível carregar o modelo da página. Recarregue e tente de novo.':'Não foi possível publicar agora. Tente novamente em instantes.','err');
+    }
+  }
+})();
+</script>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')})});
+  var f=document.getElementById('leadForm');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('f-nome'), t=document.getElementById('f-tel');
+    var old=f.querySelector('.form-ok'); if(old) old.remove();
+    var msg=document.createElement('div'); msg.className='form-ok';
+    if(!n.value.trim()||!t.value.trim()){
+      msg.textContent='Preencha nome e WhatsApp para continuar.';
+      msg.style.background='#FDECEC';msg.style.borderColor='#D9534F';msg.style.color='#9B2C2C';
+      (n.value.trim()?t:n).focus();
+    } else {
+      var txt='Olá! Meu nome é '+n.value.trim()+'.'+
+        '\nInteresse: '+document.getElementById('f-int').value+
+        (document.getElementById('f-cidade').value.trim()?'\nCidade/bairro: '+document.getElementById('f-cidade').value.trim():'')+
+        (document.getElementById('f-msg').value.trim()?'\n'+document.getElementById('f-msg').value.trim():'')+
+        '\nMeu WhatsApp: '+t.value.trim();
+      var url='https://wa.me/5511996041466?text='+encodeURIComponent(txt);
+      msg.innerHTML='Mensagem pronta. ';
+      var a=document.createElement('a'); a.href=url; a.target='_blank'; a.rel='noopener';
+      a.textContent='Abrir o WhatsApp e enviar →'; a.style.color='var(--navy)'; a.style.fontWeight='700';
+      msg.appendChild(a);
+    }
+    f.insertBefore(msg,document.getElementById('formNote'));
+  });
+})();
+</script>
+</body>
+</html>

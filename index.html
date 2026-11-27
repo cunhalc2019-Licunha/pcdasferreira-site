@@ -454,6 +454,20 @@ footer a:hover{color:var(--white)}
 .lb p{color:#fff;text-align:center;margin:10px 0 0;font-family:var(--f-display)}
 .lb-x{position:fixed;top:14px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:1.5rem;cursor:pointer}
 @media (max-width:900px){.lanc-grid{grid-template-columns:1fr}}
+/* IMÓVEL EM DESTAQUE (casa alto padrão R$ 4,2 mi) */
+.dest-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:1.15fr 1fr}
+.dest-media{display:grid;gap:8px;padding:8px;align-content:start;min-width:0}
+.dest-media figure{margin:0;position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--ice)}
+.dest-media figure img{width:100%;height:100%;object-fit:cover}
+.dest-media .lanc-gal{grid-template-columns:repeat(3,1fr)}
+.dest-video{position:relative;border-radius:10px;overflow:hidden;background:var(--navy-deep);display:grid;grid-template-columns:auto 1fr;align-items:center;gap:16px;padding:10px 16px 10px 10px;color:var(--white)}
+.dest-video video{width:120px;aspect-ratio:9/16;object-fit:cover;border-radius:8px}
+.dest-video b{font-family:var(--f-display);display:block}
+.dest-video span{color:#C4D2E6;font-size:.9rem}
+.dest-card .lanc-hl .big b{font-size:2rem}
+.dest-card .lanc-body{align-content:start}
+.dest-card .lanc-loc{margin-top:-6px}
+@media (max-width:900px){.dest-card{grid-template-columns:1fr}}
 @media (max-width:520px){.lanc-gal{grid-template-columns:repeat(3,1fr)}.lanc-hl{grid-template-columns:1fr}}
 </style>
 </head>
@@ -665,6 +679,56 @@ footer a:hover{color:var(--white)}
   </div>
 </section>
 
+<!-- 5a. IMÓVEL EM DESTAQUE: casa alto padrão R$ 4.200.000 (fotos e vídeo enviados pelo PC em 26-27/11/2026) -->
+<!-- TROCAR: completar bairro/cidade, metragem, quartos, suítes e vagas quando o PC enviar -->
+<section class="section" id="destaque">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Imóvel em destaque · À venda</span>
+      <h2>Casa de alto padrão pronta para morar, com piscina e acabamento de primeira.</h2>
+      <p>Sobrado contemporâneo com pé-direito duplo, ambientes integrados e área de lazer completa. Agende sua visita com a PC das Ferreira.</p>
+    </div>
+    <article class="dest-card">
+      <div class="dest-media">
+        <figure><img src="assets/casa42-fachada.jpg" alt="Fachada do sobrado contemporâneo com varanda de vidro e garagem coberta" loading="lazy"><span class="tag launch">À venda</span></figure>
+        <div class="lanc-gal" aria-label="Fotos da casa">
+          <button type="button" data-lb="assets/casa42-fachada.jpg" data-cap="Fachada"><img src="assets/casa42-fachada.jpg" alt="Fachada" loading="lazy"></button>
+          <button type="button" data-lb="assets/casa42-living.jpg" data-cap="Living com pé-direito duplo"><img src="assets/casa42-living.jpg" alt="Living" loading="lazy"></button>
+          <button type="button" data-lb="assets/casa42-sala.jpg" data-cap="Sala integrada"><img src="assets/casa42-sala.jpg" alt="Sala integrada" loading="lazy"></button>
+          <button type="button" data-lb="assets/casa42-escada.jpg" data-cap="Escada escultural com guarda-corpo de vidro"><img src="assets/casa42-escada.jpg" alt="Escada" loading="lazy"></button>
+          <button type="button" data-lb="assets/casa42-piscina.jpg" data-cap="Piscina com prainha e deck"><img src="assets/casa42-piscina.jpg" alt="Piscina" loading="lazy"></button>
+          <button type="button" data-lb="assets/casa42-area-externa.jpg" data-cap="Área externa com painel de LED"><img src="assets/casa42-area-externa.jpg" alt="Área externa" loading="lazy"></button>
+        </div>
+        <div class="dest-video">
+          <video src="assets/casa42-piscina.mp4" poster="assets/casa42-piscina-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo da piscina com painel de LED"></video>
+          <div><b>Lazer completo</b><span>Piscina com prainha, deck de madeira, paisagismo e painel de LED para assistir na área externa.</span></div>
+        </div>
+      </div>
+      <div class="lanc-body">
+        <h3>Casa de alto padrão</h3>
+        <p class="lanc-loc">📍 Sobrado · Venda</p>
+        <div class="lanc-hl">
+          <div class="big"><small>Valor de venda</small><b>R$ 4.200.000</b></div>
+        </div>
+        <ul class="lanc-list">
+          <li><span>Living com <b>pé-direito duplo</b> e escada escultural com guarda-corpo de vidro</span></li>
+          <li><span>Piso em <b>porcelanato marmorizado</b> e forro com iluminação em LED</span></li>
+          <li><span>Ambientes integrados com <b>esquadrias de vidro do piso ao teto</b></span></li>
+          <li><span>Climatização com <b>ar-condicionado</b> nas áreas sociais</span></li>
+          <li><span><b>Piscina com prainha</b>, deck de madeira e paisagismo</span></li>
+          <li><span>Painel de LED na área externa e varanda com guarda-corpo de vidro</span></li>
+          <li><span>Garagem coberta com iluminação embutida</span></li>
+        </ul>
+        <p class="lanc-note">Metragem, plantas e demais informações sob consulta. Valor sujeito a alteração sem aviso prévio.</p>
+        <div class="lanc-cta">
+          <a class="btn btn-green" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Tenho%20interesse%20na%20casa%20de%20alto%20padr%C3%A3o%20de%20R%24%204.200.000%20que%20vi%20no%20site." target="_blank" rel="noopener">Agendar visita</a>
+          <a class="btn btn-navy" href="#contato">Fale conosco</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
 <!-- 5b. LANÇAMENTOS: Loteamento Solar das Acácias e Residencial Ushuaia (informações enviadas pelo PC em 19/11/2026) -->
 <section class="section lanc" id="lancamentos">
   <div class="wrap">
@@ -755,7 +819,7 @@ footer a:hover{color:var(--white)}
   (function(){
     var lb=document.getElementById('lanc-lb'); if(!lb||!lb.showModal) return;
     var img=lb.querySelector('img'), cap=lb.querySelector('p');
-    document.querySelectorAll('#lancamentos [data-lb]').forEach(function(b){
+    document.querySelectorAll('#destaque [data-lb], #lancamentos [data-lb]').forEach(function(b){
       b.addEventListener('click',function(){img.src=b.dataset.lb; img.alt=b.dataset.cap||''; cap.textContent=b.dataset.cap||''; lb.showModal();});
     });
     lb.addEventListener('click',function(e){ if(e.target===lb||e.target.classList.contains('lb-x')) lb.close(); });

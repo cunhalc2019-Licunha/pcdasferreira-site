@@ -9,105 +9,8 @@
 <link rel="icon" type="image/png" href="assets/emblema.png?v=2">
 <meta property="og:title" content="PC das Ferreira · Imobiliária, Construtora e Engenharia">
 <meta property="og:description" content="Compra, venda, locação e administração de imóveis, construção, reformas e infraestrutura de engenharia em São Paulo.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1741023705492-48561fc75bab?w=2400&q=80&auto=format&fit=crop">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
-.emp-pay{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;background:var(--ice)}
-.emp-pay>b{font-family:var(--f-display);color:var(--navy)}
-.pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.pay-grid div{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;gap:4px;align-content:start}
-.pay-grid strong{font-family:var(--f-display);font-size:1.25rem;color:var(--green-deep);white-space:nowrap}
-.pay-grid span{font-size:.85rem;color:var(--ink);line-height:1.4}
-.emp-pay small{font-size:.78rem;color:var(--muted)}
-@media (max-width:520px){.pay-grid{grid-template-columns:1fr}}
-.emp-thumbs.many{grid-template-columns:repeat(5,1fr)}
-@media (max-width:520px){.emp-thumbs.many{grid-template-columns:repeat(4,1fr)}}
-.plantas{margin-top:8px;padding:clamp(20px,3vw,32px);border-radius:var(--r);background:var(--ice);border:1px solid var(--line);display:grid;gap:18px}
-.plantas-head h4{margin:0 0 4px;font-family:var(--f-display);font-size:1.3rem;color:var(--navy)}
-.plantas-head p{color:var(--muted);font-size:.95rem}
-.plantas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.planta{display:grid;background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
-.planta:hover{border-color:var(--blue);transform:translateY(-2px)}
-.planta img{width:100%;aspect-ratio:1543/1091;object-fit:cover;display:block}
-.planta span{padding:10px 12px;font-size:.86rem;color:var(--muted);display:grid;gap:2px}
-.planta b{font-family:var(--f-display);font-size:1.1rem;color:var(--navy)}
-@media (max-width:760px){.plantas-grid{grid-template-columns:repeat(2,1fr)}}
-
-.hero-emp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px;max-width:640px}
-.he-card{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:center;padding:10px;border-radius:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);text-decoration:none;color:var(--white);transition:background .2s,border-color .2s}
-.he-card:hover{background:rgba(255,255,255,.18);border-color:var(--green)}
-.he-card:focus-visible{outline:3px solid var(--green);outline-offset:2px}
-.he-card img{width:84px;height:64px;object-fit:cover;border-radius:9px}
-.he-card span{display:grid;gap:2px;min-width:0}
-.he-card small{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#9FB4D1;font-weight:700}
-.he-card b{font-family:var(--f-display);font-size:1rem}
-.he-card em{font-style:normal;font-size:.82rem;color:var(--green);font-weight:700}
-@media (max-width:620px){.hero-emp{grid-template-columns:1fr}}
-.lanc-alt{background:var(--ice)}
-.lanc-alt .emp{border-top:0;padding-top:0}
-.lanc-alt .plantas{background:var(--white)}
-.corretores .brokers{margin-top:0}
-.lanc .emp{border-top:0;padding-top:0}
-.lanc .emp-info>.emp-tag,.lanc .emp-info>h3{display:none}
-/* ===== empreendimentos em destaque ===== */
-.lanc{background:var(--white)}
-.emp{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(24px,4vw,56px);align-items:start;padding-block:clamp(28px,4vw,48px);border-top:1px solid var(--line)}
-.emp:first-of-type{border-top:0;padding-top:0}
-.emp-rev .emp-media{order:2}
-.emp-media{display:grid;gap:10px;min-width:0}
-.emp-main{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:var(--ice)}
-.emp-main.tall{aspect-ratio:4/5;max-width:460px;justify-self:center;width:100%}
-.emp-main img{width:100%;height:100%;object-fit:cover;display:block}
-.emp-flag{position:absolute;left:14px;top:14px;background:var(--green);color:var(--navy-deep);font-family:var(--f-display);font-weight:700;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
-.emp-flag.hot{background:#D7263D;color:#fff}
-.emp-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.emp-thumbs button{padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;aspect-ratio:16/10;background:var(--ice)}
-.emp-thumbs button[aria-current="true"]{border-color:var(--green)}
-.emp-thumbs button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.emp-thumbs img{width:100%;height:100%;object-fit:cover;display:block}
-.emp-video{width:100%;border-radius:var(--r);background:#000;aspect-ratio:16/9}
-.emp-info{display:grid;gap:16px;min-width:0}
-.emp-tag{font-family:var(--f-display);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
-.emp-info h3{font-size:clamp(1.8rem,3.2vw,2.5rem);color:var(--navy)}
-.emp-lead{color:var(--muted);font-size:1.04rem}
-.emp-price{display:grid;gap:2px;background:var(--navy);color:var(--white);border-radius:12px;padding:16px 20px;justify-self:start}
-.emp-price small{color:#C4D2E6;font-size:.85rem}
-.emp-price b{font-family:var(--f-display);font-size:1.9rem;font-variant-numeric:tabular-nums}
-.emp-progress{display:grid;gap:8px}
-.emp-progress div{height:10px;background:var(--ice);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
-.emp-progress span{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--green-deep))}
-.emp-progress p{font-size:.92rem;color:var(--ink)}
-.emp-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.emp-list li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-weight:600;color:var(--ink)}
-.emp-list li::before{content:"";width:22px;height:22px;border-radius:50%;margin-top:2px;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23071D3D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/13px no-repeat}
-.emp-calc{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.emp-calc div{display:grid;gap:2px;background:var(--ice);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
-.emp-calc div.tot{background:var(--navy);border-color:var(--navy);color:var(--white)}
-.emp-calc small{font-size:.78rem;color:var(--muted)}
-.emp-calc .tot small{color:#C4D2E6}
-.emp-calc b{font-family:var(--f-display);font-size:1.25rem;color:var(--navy);font-variant-numeric:tabular-nums;white-space:nowrap}
-.emp-calc .tot b{color:var(--green)}
-.emp-calc span{font-family:var(--f-display);font-weight:700;color:var(--muted);font-size:1.2rem}
-.emp-note{font-size:.8rem;color:var(--muted);line-height:1.5}
-.emp-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.btn.btn-line{border-color:var(--navy);color:var(--navy)}
-.btn.btn-line:hover{background:var(--navy);color:var(--white)}
-.brokers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(24px,3vw,40px)}
-.brk{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;background:var(--ice)}
-.brk img,.brk-ini{width:52px;height:52px;flex:0 0 52px;border-radius:50%}
-.brk-ini{display:grid;place-items:center;background:var(--navy);color:var(--white);font-family:var(--f-display);font-weight:700}
-.brk div{display:grid;gap:2px;min-width:0}
-.brk b{font-family:var(--f-display);color:var(--navy)}
-.brk span{font-size:.88rem;color:var(--muted)}
-.brk a{font-weight:700;color:var(--green-deep);text-decoration:none;font-size:.95rem}
-.brk a:hover{color:var(--navy)}
-.events{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
-.events figure{margin:0;border-radius:var(--r);overflow:hidden;aspect-ratio:3/2}
-.events img{width:100%;height:100%;object-fit:cover;display:block}
-.events p{grid-column:1/-1;font-size:.9rem;color:var(--muted)}
-@media (max-width:900px){.emp{grid-template-columns:1fr}.emp-rev .emp-media{order:0}.brokers{grid-template-columns:1fr}}
-@media (max-width:520px){.events{grid-template-columns:1fr}.emp-thumbs{grid-template-columns:repeat(4,1fr);gap:6px}}
-</style>
-<link rel="preconnect" href="https://images.unsplash.com">
+<meta property="og:image" content="assets/hero-casa.jpg?v=2">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
@@ -182,7 +85,7 @@ p{margin:0}
 }
 
 /* hero */
-.hero{position:relative;color:var(--white);background:var(--navy-deep) url("https://images.unsplash.com/photo-1741023705492-48561fc75bab?w=2400&q=80&auto=format&fit=crop") 70% center/cover no-repeat;overflow:hidden}
+.hero{position:relative;color:var(--white);background:var(--navy-deep) url("assets/hero-casa.jpg?v=2") 70% center/cover no-repeat;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,29,61,.94) 0%,rgba(7,29,61,.82) 34%,rgba(7,29,61,.25) 66%,rgba(7,29,61,0) 82%)}
 .hero .wrap{position:relative;padding-block:clamp(72px,9vw,130px) clamp(90px,10vw,130px)}
 .hero-copy{max-width:620px;display:grid;gap:24px}
@@ -512,6 +415,46 @@ footer a:hover{color:var(--white)}
 .pubbar b{font-family:var(--f-display)}
 .pubbar span{color:#C4D2E6;font-size:.9rem}
 .btn[disabled]{opacity:.55;cursor:not-allowed;transform:none!important}
+
+/* LANÇAMENTOS (Solar das Acácias + Residencial Ushuaia) */
+.lanc{background:var(--ice)}
+.lanc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.lanc-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid}
+.lanc-card figure{margin:0;position:relative;aspect-ratio:16/9;background:var(--ice)}
+.lanc-card figure img{width:100%;height:100%;object-fit:cover}
+.lanc-card figure.empty{display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),var(--blue));color:var(--white);text-align:center;padding:24px}
+.lanc-card figure.empty img{width:78px;height:auto}
+.lanc-card figure.empty span{display:block;font-family:var(--f-display);font-weight:600;margin-top:10px;opacity:.9}
+.lanc-body{padding:clamp(20px,3vw,30px);display:grid;gap:16px}
+.lanc-body h3{font-family:var(--f-display);font-size:1.45rem;color:var(--navy);margin:0}
+.lanc-loc{color:var(--muted);font-size:.92rem;display:flex;align-items:center;gap:6px;margin-top:-10px}
+.lanc-hl{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.lanc-hl div{background:var(--ice);border-radius:10px;padding:12px 14px}
+.lanc-hl small{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.lanc-hl b{font-family:var(--f-display);font-size:1.25rem;color:var(--navy)}
+.lanc-hl .big{grid-column:1/-1;background:var(--navy);color:var(--white)}
+.lanc-hl .big small{color:#C4D2E6}
+.lanc-hl .big b{color:var(--green);font-size:1.6rem}
+.lanc-list{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.lanc-list li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}
+.lanc-list li::before{content:"";width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23071D3D' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.lanc-sub{font-family:var(--f-display);font-weight:600;color:var(--navy);font-size:.95rem;margin:4px 0 -6px}
+.lanc-note{font-size:.82rem;color:var(--muted);margin:0}
+.lanc-cta{display:flex;flex-wrap:wrap;gap:10px}
+.lanc-gal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.lanc-gal button{padding:0;border:0;border-radius:8px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/3;background:var(--ice)}
+.lanc-gal img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.lanc-gal button:hover img{transform:scale(1.06)}
+.lanc-foot{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;background:var(--navy);color:var(--white);border-radius:var(--r);padding:22px 26px}
+.lanc-foot b{font-family:var(--f-display);font-size:1.15rem}
+.lanc-foot span{color:#C4D2E6;display:block;font-size:.92rem}
+.lb{border:0;padding:0;background:transparent;max-width:min(1100px,94vw);max-height:92vh}
+.lb::backdrop{background:rgba(7,29,61,.88)}
+.lb img{display:block;max-width:100%;max-height:86vh;border-radius:10px}
+.lb p{color:#fff;text-align:center;margin:10px 0 0;font-family:var(--f-display)}
+.lb-x{position:fixed;top:14px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:1.5rem;cursor:pointer}
+@media (max-width:900px){.lanc-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.lanc-gal{grid-template-columns:repeat(3,1fr)}.lanc-hl{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -529,7 +472,8 @@ footer a:hover{color:var(--white)}
       <a href="#sobre">A construtora</a>
       <a href="#servicos">Serviços</a>
       <a href="#imoveis">Imóveis</a>
-      <a href="#solar-das-acacias">Empreendimentos</a>
+      <a href="#lancamentos">Lançamentos</a>
+      <a href="#processo">Como funciona</a>
       <a href="#contato">Contato</a>
       <a class="btn btn-navy" href="#contato">Solicitar orçamento</a>
     </nav>
@@ -543,7 +487,7 @@ footer a:hover{color:var(--white)}
     <div class="hero-copy">
       <span class="eyebrow">Imobiliária · Construtora · Engenharia</span>
       <h1>Construímos o lugar onde o seu <em>futuro</em> acontece.</h1>
-      <p class="lead">Compra, venda, locação e administração de imóveis, construção, reformas e infraestrutura de engenharia. Tudo com a mesma equipe, em São Paulo e Jaú.</p>
+      <p class="lead">Compra, venda, locação e administração de imóveis, construção, reformas e infraestrutura de engenharia. Tudo com a mesma equipe, em São Paulo.</p>
       <div class="hero-ctas">
         <a class="btn btn-green" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20PC%20das%20Ferreira%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>
@@ -563,9 +507,10 @@ footer a:hover{color:var(--white)}
           <a href="#svc-infra">Infraestrutura de engenharia</a>
         </div>
       </nav>
-      <div class="hero-emp" aria-label="Empreendimentos em destaque">
-        <a class="he-card" href="#solar-das-acacias"><img src="assets/solar-aerea.jpg" alt=""><span><small>Loteamento · Jaú</small><b>Solar das Acácias</b><em>Lotes a partir de R$ 94.390 · restam 40</em></span></a>
-        <a class="he-card" href="#residencial-ushuaia"><img src="assets/ushuaia-fachada.jpg" alt=""><span><small>Apartamentos · Jaú</small><b>Residencial Ushuaia</b><em>Até R$ 38.200 de desconto</em></span></a>
+      <div class="hero-chips">
+        <span>Corretora e construtora</span>
+        <span>Engenharia própria</span>
+        <span>Moema, São Paulo – SP</span>
       </div>
     </div>
   </div>
@@ -583,128 +528,8 @@ footer a:hover{color:var(--white)}
   </div>
 </div>
 
-<!-- EMPREENDIMENTO: SOLAR DAS ACÁCIAS -->
-<section class="section after-stats lanc" id="solar-das-acacias">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Empreendimento em Jaú · Loteamento</span>
-      <h2>Solar das Acácias: últimos lotes disponíveis.</h2>
-      <p>A PC das Ferreira coordena as vendas e a corretagem do Solar das Acácias. Escolha seu lote com preços especiais e parcelamento direto com a loteadora.</p>
-    </div>
-    <article class="emp">
-      <div class="emp-media">
-        <div class="emp-main"><img id="solar-main" src="assets/solar-aerea.jpg" alt="Vista aérea do loteamento Solar das Acácias com área comercial e avenida arborizada" width="1376" height="768"><span class="emp-flag">Últimas unidades</span></div>
-        <div class="emp-thumbs" role="group" aria-label="Fotos do Solar das Acácias">
-          <button type="button" data-src="assets/solar-aerea.jpg" aria-current="true"><img src="assets/solar-aerea.jpg" alt="Vista aérea" loading="lazy"></button>
-          <button type="button" data-src="assets/solar-rua.jpg" aria-current="false"><img src="assets/solar-rua.jpg" alt="Rua arborizada com casas" loading="lazy"></button>
-          <button type="button" data-src="assets/solar-comercio.jpg" aria-current="false"><img src="assets/solar-comercio.jpg" alt="Área comercial ao entardecer" loading="lazy"></button>
-          <button type="button" data-src="assets/solar-praca.jpg" aria-current="false"><img src="assets/solar-praca.jpg" alt="Praça do bairro" loading="lazy"></button>
-        </div>
-        <video class="emp-video" src="assets/solar-acacias.mp4" poster="assets/solar-acacias-poster.jpg" controls muted playsinline preload="none" aria-label="Vídeo de apresentação do Solar das Acácias"></video>
-      </div>
-      <div class="emp-info">
-        <span class="emp-tag">Loteamento · Jaú – SP</span>
-        <h3>Solar das Acácias</h3>
-        <p class="emp-lead">Lotes residenciais e comerciais de 160 m² em um bairro planejado, com infraestrutura completa. Excelente localização, próximo ao Supermercado Confiança.</p>
-        <div class="emp-price"><small>Lotes a partir de</small><b>R$ 94.390,00</b></div>
-        <div class="emp-progress" aria-label="85% dos lotes já vendidos"><div><span style="width:85%"></span></div><p><b>85% vendido</b> · restam 40 lotes nas quadras 1 e 4</p></div>
-        <ul class="emp-list">
-          <li>Lotes de 160 m², residenciais e comerciais</li>
-          <li>Bairro planejado com infraestrutura completa</li>
-          <li>Parcelamento facilitado, direto com a loteadora</li>
-          <li>Preços especiais para as últimas unidades</li>
-        </ul>
-        <div class="emp-pay">
-          <b>Condições de pagamento</b>
-          <div class="pay-grid">
-            <div><strong>10%</strong><span>de entrada no ato e você ganha <b>+5% de desconto</b> no valor do lote</span></div>
-            <div><strong>36x</strong><span>parcelamento <b>sem juros</b></span></div>
-            <div><strong>48x a 180x</strong><span>parcelamento em até 180 meses</span></div>
-          </div>
-          <small>Condições direto com a loteadora, sujeitas a alteração. Consulte.</small>
-        </div>
-        <div class="emp-ctas">
-          <a class="btn btn-green" href="https://wa.me/5511994032789?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20lotes%20do%20Solar%20das%20Ac%C3%A1cias%20em%20Ja%C3%BA." target="_blank" rel="noopener">Quero escolher meu lote</a>
-          <a class="btn btn-line" href="https://wa.me/5514996586868?text=Ol%C3%A1%20Paulino!%20Tenho%20interesse%20nos%20lotes%20do%20Solar%20das%20Ac%C3%A1cias." target="_blank" rel="noopener">Falar com o corretor</a>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- EMPREENDIMENTO: RESIDENCIAL USHUAIA -->
-<section class="section lanc lanc-alt" id="residencial-ushuaia">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Empreendimento em Jaú · Apartamentos</span>
-      <h2>Residencial Ushuaia: até R$ 38.200 de desconto.</h2>
-      <p>Apartamentos de 2 dormitórios no Jardim Olímpia, com lazer completo e condições especiais pelo Casa Paulista e Minha Casa Minha Vida.</p>
-    </div>
-    <article class="emp emp-rev">
-      <div class="emp-media">
-        <div class="emp-main"><img src="assets/ushuaia-fachada.jpg" alt="Fachada do Residencial Ushuaia com estacionamento e paisagismo" width="1400" height="788" loading="lazy"><span class="emp-flag hot">Black Vilaurbe</span></div>
-        <div class="emp-thumbs many" role="group" aria-label="Fotos do Residencial Ushuaia"><button type="button" data-src="assets/ushuaia-fachada.jpg" aria-current="true"><img src="assets/ushuaia-fachada.jpg" alt="Fachada do Residencial Ushuaia" loading="lazy"></button><button type="button" data-src="assets/ushuaia-piscina.jpg" aria-current="false"><img src="assets/ushuaia-piscina.jpg" alt="Piscina" loading="lazy"></button><button type="button" data-src="assets/ushuaia-gourmet.jpg" aria-current="false"><img src="assets/ushuaia-gourmet.jpg" alt="Espaço gourmet com pergolado" loading="lazy"></button><button type="button" data-src="assets/ushuaia-living.jpg" aria-current="false"><img src="assets/ushuaia-living.jpg" alt="Sala decorada" loading="lazy"></button><button type="button" data-src="assets/ushuaia-quarto.jpg" aria-current="false"><img src="assets/ushuaia-quarto.jpg" alt="Quarto de casal decorado" loading="lazy"></button><button type="button" data-src="assets/ushuaia-quarto-kids.jpg" aria-current="false"><img src="assets/ushuaia-quarto-kids.jpg" alt="Quarto infantil decorado" loading="lazy"></button><button type="button" data-src="assets/ushuaia-lazer.jpg" aria-current="false"><img src="assets/ushuaia-lazer.jpg" alt="Playground e pista de caminhada" loading="lazy"></button><button type="button" data-src="assets/ushuaia-aerea.jpg" aria-current="false"><img src="assets/ushuaia-aerea.jpg" alt="Implantação vista de cima" loading="lazy"></button><button type="button" data-src="assets/ushuaia-black.jpg" aria-current="false"><img src="assets/ushuaia-black.jpg" alt="Campanha Black Vilaurbe" loading="lazy"></button></div>
-      </div>
-      <div class="emp-info">
-        <span class="emp-tag">Apartamentos · Jardim Olímpia, Jaú – SP</span>
-        <h3>Residencial Ushuaia</h3>
-        <p class="emp-lead">Saia do aluguel e conquiste seu apartamento. Localizado no Jardim Olímpia, próximo a supermercado, farmácia e padaria.</p>
-        <div class="emp-calc">
-          <div><small>Desconto da construtora</small><b>até R$ 28.200</b></div>
-          <span>+</span>
-          <div><small>Cheque Paulista</small><b>R$ 10.000</b></div>
-          <span>=</span>
-          <div class="tot"><small>Total de desconto</small><b>até R$ 38.200</b></div>
-        </div>
-        <ul class="emp-list">
-          <li>Casa Paulista + Minha Casa Minha Vida</li>
-          <li><span>ITBI + registro grátis*</span></li>
-          <li><span>Entrada em até 60x* e mais facilidade para financiar</span></li>
-          <li>Financiamento pela Caixa</li>
-          <li>Lazer com piscina, espaço gourmet, playground e área fitness</li>
-        </ul>
-        <p class="emp-note">*Condições válidas em novembro de 2026 para unidades da Torre A, sujeitas a regras dos programas, disponibilidade de unidades e análise de crédito. Consulte condições comerciais.</p>
-        <div class="emp-ctas">
-          <a class="btn btn-green" href="https://wa.me/5514996586868?text=Ol%C3%A1!%20Quero%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Residencial%20Ushuaia." target="_blank" rel="noopener">Fazer minha simulação</a>
-          <a class="btn btn-line" href="https://wa.me/5511994032789?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Residencial%20Ushuaia." target="_blank" rel="noopener">Falar com a PC das Ferreira</a>
-        </div>
-      </div>
-    </article>
-    <div class="plantas">
-      <div class="plantas-head"><h4>Plantas do Residencial Ushuaia</h4><p>Apartamentos de 2 dormitórios, pé-direito de 2,60 m. Unidades térreas com quintal privativo. Áreas aproximadas.</p></div>
-      <div class="plantas-grid"><a href="assets/ushuaia-planta-44a.jpg" target="_blank" rel="noopener" class="planta"><img src="assets/ushuaia-planta-44a.jpg" alt="Planta 44 m² – Tipo sem suíte · finais 07 a 10" loading="lazy"><span><b>44 m²</b>Tipo sem suíte · finais 07 a 10</span></a><a href="assets/ushuaia-planta-44b.jpg" target="_blank" rel="noopener" class="planta"><img src="assets/ushuaia-planta-44b.jpg" alt="Planta 44 m² – Tipo sem suíte · finais 03 a 06" loading="lazy"><span><b>44 m²</b>Tipo sem suíte · finais 03 a 06</span></a><a href="assets/ushuaia-planta-67.jpg" target="_blank" rel="noopener" class="planta"><img src="assets/ushuaia-planta-67.jpg" alt="Planta 67 m² – Térreo sem suíte · quintal 23,52 m²" loading="lazy"><span><b>67 m²</b>Térreo sem suíte · quintal 23,52 m²</span></a><a href="assets/ushuaia-planta-68.jpg" target="_blank" rel="noopener" class="planta"><img src="assets/ushuaia-planta-68.jpg" alt="Planta 68 m² – Térreo sem suíte · quintal 23,81 m²" loading="lazy"><span><b>68 m²</b>Térreo sem suíte · quintal 23,81 m²</span></a><a href="assets/ushuaia-planta-77.jpg" target="_blank" rel="noopener" class="planta"><img src="assets/ushuaia-planta-77.jpg" alt="Planta 77 m² – Térreo com suíte · quintal 29,47 m²" loading="lazy"><span><b>77 m²</b>Térreo com suíte · quintal 29,47 m²</span></a><a href="assets/ushuaia-planta-80.jpg" target="_blank" rel="noopener" class="planta"><img src="assets/ushuaia-planta-80.jpg" alt="Planta 80 m² – Térreo sem suíte · quintal 36,05 m²" loading="lazy"><span><b>80 m²</b>Térreo sem suíte · quintal 36,05 m²</span></a></div>
-    </div>
-  </div>
-</section>
-
-<!-- CORRETORES -->
-<section class="section corretores" id="corretores">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Fale conosco</span>
-      <h2>Coordenação de vendas e corretagem em Jaú e região.</h2>
-      <p>Tire suas dúvidas, faça uma simulação ou agende uma visita com a PC das Ferreira e o corretor parceiro.</p>
-    </div>
-    <div class="brokers">
-      <div class="brk">
-        <img src="assets/emblema.png" alt="">
-        <div><b>PC Empreendimento</b><span>Paulo César Ferreira · CRECISP 022626-J</span><a href="https://wa.me/5511994032789" target="_blank" rel="noopener">WhatsApp (11) 99403-2789</a></div>
-      </div>
-      <div class="brk">
-        <span class="brk-ini" aria-hidden="true">PS</span>
-        <div><b>Corretor de Imóveis</b><span>Paulino Serrano Junior · CRECISP 237957-F</span><a href="https://wa.me/5514996586868" target="_blank" rel="noopener">WhatsApp (14) 99658-6868</a></div>
-      </div>
-    </div>
-    <div class="events">
-      <figure><img src="assets/evento-plateia.jpg" alt="Plateia em evento com corretores e parceiros" loading="lazy"></figure>
-      <figure><img src="assets/evento-equipe.jpg" alt="Equipe reunida em evento com corretores e parceiros" loading="lazy"></figure>
-      <p>Encontro com corretores e parceiros.</p>
-    </div>
-  </div>
-</section>
-
 <!-- 3. SOBRE -->
-<section class="section" id="sobre">
+<section class="section after-stats" id="sobre">
   <div class="wrap about-grid">
     <div class="about-media">
       <img src="assets/fachada-dia.jpg?v=2" alt="Fachada de edifício residencial com o letreiro da PC das Ferreira" width="1080" height="1350" loading="lazy">
@@ -793,7 +618,7 @@ footer a:hover{color:var(--white)}
     </div>
     <div class="proj-grid areas">
       <article class="proj">
-        <figure><img src="https://images.unsplash.com/photo-1782256836342-d557fa15dc13?w=1200&q=80&auto=format&fit=crop" alt="Edifício residencial de alto padrão com fachada de vidro ondulada em Nova York" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
+        <figure><img src="assets/bloco-locacao.jpg?v=2" alt="Sala de apartamento mobiliado com chaves e contrato de locação sobre a bancada" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
         <div class="proj-body">
           <h3>Locação</h3>
           <p class="proj-desc">Imóveis residenciais e comerciais para alugar, com contrato seguro e vistoria completa.</p>
@@ -801,7 +626,7 @@ footer a:hover{color:var(--white)}
         </div>
       </article>
       <article class="proj">
-        <figure><img src="https://images.unsplash.com/photo-1589083130544-0d6a2926e519?w=1200&q=80&auto=format&fit=crop" alt="Vista aérea da orla de Miami Beach com edifícios residenciais" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
+        <figure><img src="assets/bloco-venda.jpg?v=2" alt="Entrada de edifício com placa de venda da PC das Ferreira" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
         <div class="proj-body">
           <h3>Venda</h3>
           <p class="proj-desc">Apartamentos, casas e imóveis comerciais à venda, com avaliação justa e documentação segura.</p>
@@ -809,7 +634,7 @@ footer a:hover{color:var(--white)}
         </div>
       </article>
       <article class="proj">
-        <figure><img src="https://images.unsplash.com/photo-1793631864787-b2ac67aa5496?w=1200&q=80&auto=format&fit=crop" alt="Edifício residencial em frente ao Central Park, Nova York" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
+        <figure><img src="assets/bloco-administracao.jpg?v=2" alt="Mesa de escritório com relatórios, pastas e chaves de imóveis administrados" loading="lazy"><span class="tag launch">Imobiliária</span></figure>
         <div class="proj-body">
           <h3>Administração</h3>
           <p class="proj-desc">Cobrança, repasses, manutenção e atendimento ao inquilino. Seu imóvel rendendo sem dor de cabeça.</p>
@@ -817,7 +642,7 @@ footer a:hover{color:var(--white)}
         </div>
       </article>
       <article class="proj wide">
-        <figure><img src="https://images.unsplash.com/photo-1775344215140-2551ed60a89e?w=1600&q=80&auto=format&fit=crop" alt="Casa contemporânea no litoral da Califórnia" loading="lazy"><span class="tag ready">Imobiliária</span></figure>
+        <figure><img src="assets/bloco-compra-venda.jpg?v=2" alt="Aperto de mãos sobre contrato de compra e venda, maquete de casa e chaves" loading="lazy"><span class="tag ready">Imobiliária</span></figure>
         <div class="proj-body">
           <h3>Compra e venda</h3>
           <p class="proj-desc">Intermediação completa entre comprador e vendedor: busca do imóvel certo, negociação, documentação e escritura.</p>
@@ -825,7 +650,7 @@ footer a:hover{color:var(--white)}
         </div>
       </article>
       <article class="proj wide">
-        <figure><img src="https://images.unsplash.com/photo-1708132948861-083763f3da73?w=1600&q=80&auto=format&fit=crop" alt="Grua sobre edifício em construção em Manhattan" loading="lazy"><span class="tag works">Engenharia</span></figure>
+        <figure><img src="assets/bloco-infra.jpg?v=2" alt="Engenheiro com capacete e tablet observando obra com grua" loading="lazy"><span class="tag works">Engenharia</span></figure>
         <div class="proj-body">
           <h3>Infraestrutura de engenharia</h3>
           <p class="proj-desc">Projetos, laudos, aprovações e execução de infraestrutura para obras residenciais, comerciais e empreendimentos.</p>
@@ -838,6 +663,104 @@ footer a:hover{color:var(--white)}
       <div class="cat-grid" id="home-dest-grid"></div>
     </div>
   </div>
+</section>
+
+<!-- 5b. LANÇAMENTOS: Loteamento Solar das Acácias e Residencial Ushuaia (informações enviadas pelo PC em 19/11/2026) -->
+<section class="section lanc" id="lancamentos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Lançamentos · Jaú/SP</span>
+      <h2>Oportunidades com condições especiais para você investir ou morar.</h2>
+      <p>Empreendimentos com corretagem e coordenação de vendas da PC das Ferreira. Fale com a gente e garanta a sua unidade antes que acabe.</p>
+    </div>
+
+    <div class="lanc-grid">
+      <!-- LOTEAMENTO SOLAR DAS ACÁCIAS -->
+      <article class="lanc-card">
+        <!-- TROCAR: incluir foto ou vídeo do loteamento quando o PC enviar -->
+        <figure class="empty"><div><img src="assets/emblema.png?v=2" alt=""><span>Loteamento Solar das Acácias</span></div><span class="tag launch">85% vendido</span></figure>
+        <div class="lanc-body">
+          <h3>Loteamento Solar das Acácias</h3>
+          <p class="lanc-loc">📍 Jaú/SP · Lotes residenciais</p>
+          <p style="margin:0">Sucesso de vendas: <b>85% dos lotes já foram vendidos</b>. Restam apenas <b>40 lotes</b>, nas quadras 1 e 4.</p>
+          <div class="lanc-hl">
+            <div><small>Lotes a partir de</small><b>R$ 94.390</b></div>
+            <div><small>e também por</small><b>R$ 96.490</b></div>
+            <div class="big"><small>Disponíveis</small><b>Últimos 40 lotes</b></div>
+          </div>
+          <p class="lanc-sub">Pagamento facilitado</p>
+          <ul class="lanc-list">
+            <li><span>Entrada de <b>10% no ato</b> e ganhe <b>mais 5% de desconto</b> no valor do lote</span></li>
+            <li><span>Parcelamento em <b>até 36x sem juros</b></span></li>
+            <li><span>Ou parcelamento de <b>48x até 180x</b></span></li>
+          </ul>
+          <p class="lanc-note">Valores e condições sujeitos a disponibilidade dos lotes.</p>
+          <div class="lanc-cta">
+            <a class="btn btn-green" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20lotes%20do%20Loteamento%20Solar%20das%20Ac%C3%A1cias." target="_blank" rel="noopener">Quero um lote</a>
+            <a class="btn btn-navy" href="#contato">Fale conosco</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- RESIDENCIAL USHUAIA -->
+      <article class="lanc-card">
+        <figure><img src="assets/ushuaia-fachada.jpg" alt="Fachada do Residencial Ushuaia" loading="lazy"><span class="tag launch">Casa Paulista + MCMV</span></figure>
+        <div class="lanc-body">
+          <h3>Residencial Ushuaia</h3>
+          <p class="lanc-loc">📍 Apartamentos · Programa Casa Paulista + Minha Casa Minha Vida</p>
+          <p style="margin:0">Se você está esperando a oportunidade de sair do aluguel e conquistar o seu imóvel, essa pode ser a hora.</p>
+          <div class="lanc-hl">
+            <div><small>Desconto</small><b>R$ 28.200</b></div>
+            <div><small>Cheque Paulista</small><b>R$ 10.000</b></div>
+            <div class="big"><small>Total de desconto</small><b>R$ 38.200</b></div>
+          </div>
+          <ul class="lanc-list">
+            <li><span><b>Casa Paulista + Minha Casa Minha Vida</b></span></li>
+            <li><span>Menor valor de entrada e mais facilidade para financiar</span></li>
+            <li><span>Plantas de <b>44 m² a 80 m²</b>, com opções com suíte e apartamentos térreos com quintal</span></li>
+            <li><span>Lazer com piscina, espaço gourmet e playground</span></li>
+          </ul>
+          <div class="lanc-gal" aria-label="Fotos do Residencial Ushuaia">
+            <button type="button" data-lb="assets/ushuaia-fachada.jpg" data-cap="Fachada"><img src="assets/ushuaia-fachada.jpg" alt="Fachada" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-piscina.jpg" data-cap="Piscina"><img src="assets/ushuaia-piscina.jpg" alt="Piscina" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-gourmet.jpg" data-cap="Espaço gourmet"><img src="assets/ushuaia-gourmet.jpg" alt="Espaço gourmet" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-playground.jpg" data-cap="Playground"><img src="assets/ushuaia-playground.jpg" alt="Playground" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-living.jpg" data-cap="Sala e cozinha decoradas"><img src="assets/ushuaia-living.jpg" alt="Sala e cozinha" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-quarto.jpg" data-cap="Quarto decorado"><img src="assets/ushuaia-quarto.jpg" alt="Quarto" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-suite.jpg" data-cap="Suíte"><img src="assets/ushuaia-suite.jpg" alt="Suíte" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-lazer.jpg" data-cap="Área de lazer"><img src="assets/ushuaia-lazer.jpg" alt="Área de lazer" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-aerea.jpg" data-cap="Vista aérea da região"><img src="assets/ushuaia-aerea.jpg" alt="Vista aérea" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-fachada-2.jpg" data-cap="Fachada lateral"><img src="assets/ushuaia-fachada-2.jpg" alt="Fachada lateral" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-planta-77m2-terreo-suite.jpg" data-cap="Planta térreo com suíte · 77 m²"><img src="assets/ushuaia-planta-77m2-terreo-suite.jpg" alt="Planta 77 m²" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-planta-48m2-suite.jpg" data-cap="Planta tipo com suíte · 48 m²"><img src="assets/ushuaia-planta-48m2-suite.jpg" alt="Planta 48 m²" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-planta-67m2-terreo.jpg" data-cap="Planta térreo · 67 m²"><img src="assets/ushuaia-planta-67m2-terreo.jpg" alt="Planta 67 m²" loading="lazy"></button>
+            <button type="button" data-lb="assets/ushuaia-planta-80m2-terreo.jpg" data-cap="Planta térreo · 80 m²"><img src="assets/ushuaia-planta-80m2-terreo.jpg" alt="Planta 80 m²" loading="lazy"></button>
+          </div>
+          <p class="lanc-note">Condição sujeita a regras, disponibilidade e análise de crédito.</p>
+          <div class="lanc-cta">
+            <a class="btn btn-green" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Quero%20fazer%20uma%20simula%C3%A7%C3%A3o%20no%20Residencial%20Ushuaia." target="_blank" rel="noopener">Fazer minha simulação</a>
+            <a class="btn btn-navy" href="#contato">Fale conosco</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="lanc-foot">
+      <div><b>Quer saber se você pode aproveitar essas condições?</b><span>Fale direto com a PC das Ferreira e receba valores, plantas e simulação.</span></div>
+      <a class="btn btn-green" href="https://wa.me/5511996041466?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20lan%C3%A7amentos%20em%20Ja%C3%BA." target="_blank" rel="noopener">Fale conosco no WhatsApp</a>
+    </div>
+  </div>
+  <dialog class="lb" id="lanc-lb" aria-label="Foto ampliada"><button class="lb-x" type="button" aria-label="Fechar">×</button><img alt=""><p></p></dialog>
+  <script>
+  (function(){
+    var lb=document.getElementById('lanc-lb'); if(!lb||!lb.showModal) return;
+    var img=lb.querySelector('img'), cap=lb.querySelector('p');
+    document.querySelectorAll('#lancamentos [data-lb]').forEach(function(b){
+      b.addEventListener('click',function(){img.src=b.dataset.lb; img.alt=b.dataset.cap||''; cap.textContent=b.dataset.cap||''; lb.showModal();});
+    });
+    lb.addEventListener('click',function(e){ if(e.target===lb||e.target.classList.contains('lb-x')) lb.close(); });
+  })();
+  </script>
 </section>
 
 <!-- 6. VÍDEO -->
@@ -976,11 +899,11 @@ footer a:hover{color:var(--white)}
         <a class="brand" href="#inicio"><img src="assets/emblema.png?v=2" alt="" width="48"><span><b>PC DAS FERREIRA</b><small>Empreendimentos &amp; Engenharia</small></span></a>
         <p>Uma empresa voltada para o futuro.</p>
       </div>
-      <div><h4>Navegação</h4><ul><li><a href="#sobre">A construtora</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#solar-das-acacias">Empreendimentos</a></li><li><a href="#imoveis">Imóveis</a></li></ul></div>
+      <div><h4>Navegação</h4><ul><li><a href="#sobre">A construtora</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#imoveis">Imóveis</a></li></ul></div>
       <div><h4>Contato</h4><ul><li><a href="https://wa.me/5511996041466" target="_blank" rel="noopener">(11) 99604-1466</a></li><li><a href="https://wa.me/5511994032789" target="_blank" rel="noopener">(11) 99403-2789</a></li><li>Alameda dos Maracatins, 1435<br>Moema, São Paulo – SP</li><li><a href="mailto:assessoriadrpaulocesar@gmail.com">assessoriadrpaulocesar@gmail.com</a></li></ul></div>
     </div>
     <div class="legal">
-      <span>P C da S Ferreira Empreendimentos Ltda. · CNPJ 13.588.690/0001-93 · CRECISP 022626-J</span>
+      <span>P C da S Ferreira Empreendimentos Ltda. · CNPJ 13.588.690/0001-93</span>
       <span>© 2026 PC das Ferreira. Todos os direitos reservados.</span>
     </div>
   </div>
@@ -1277,9 +1200,6 @@ footer a:hover{color:var(--white)}
     f.insertBefore(msg,document.getElementById('formNote'));
   });
 })();
-</script>
-<script>
-document.querySelectorAll('.emp-thumbs button').forEach(function(b){b.addEventListener('click',function(){var g=b.closest('.emp-media');g.querySelector('.emp-main img').src=b.dataset.src;g.querySelectorAll('.emp-thumbs button').forEach(function(x){x.setAttribute('aria-current','false')});b.setAttribute('aria-current','true')})});
 </script>
 </body>
 </html>
